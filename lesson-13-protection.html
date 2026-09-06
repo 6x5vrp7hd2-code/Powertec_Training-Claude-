@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson &mdash; Protection | Powertec Training</title>
+<meta name="description" content="Powertec Training — Data Centre AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand-lockup">
+      <img src="logo-header.png" alt="Powertec">
+      <span class="division">training</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-panel" id="navPanel">
+      <a href="index.html">Home</a>
+      <a href="powertec-training.html">Powertec Training</a>
+      <a href="skills-gap-analysis.html">Skills Gap Analysis</a>
+      <a href="platform.html">The Platform</a>
+      <a href="classroom.html">Classroom Learning</a>
+      <a href="field-evidence.html">Field Evidence</a>
+      <a href="drawing-library.html">Drawing Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="classroom.html">Classroom Learning</a> &rsaquo; <a href="modules.html">Scenario Training</a> &rsaquo; Protection</div>
+    <div class="eyebrow">Lesson &middot; Module 13</div>
+    <h1>Protection</h1>
+    <p>Read this in full before attempting the scenarios below &mdash; they assume this material.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+      <div style="margin-bottom:26px;">
+        <h2>Discrimination as the thing that contains a fault</h2>
+        <p>Discrimination, or selectivity, between protective devices is what determines whether a fault takes down one final circuit or cascades up through an entire board. The principle — the downstream device should clear a fault before the upstream device operates — is one every SAP already knows. What's different in a data centre is how many more layers, and how much more variability in available fault current, the discrimination study has to account for.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Fault current isn't a fixed number</h2>
+        <p>Available fault current at any given point in the network changes depending on running configuration — the fault current available on UPS output is meaningfully different from what's available on raw mains bypass. A discrimination study that was valid for one running state isn't automatically valid for the other. This is easy to overlook because the physical switchgear and settings haven't changed — only the running configuration has.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Why a locally correct change can break selectivity elsewhere</h2>
+        <p>Changing a single device's settings — for example, upsizing a final circuit breaker to reduce nuisance tripping from IT inrush current — can look like a clean, isolated fix while quietly breaking the coordination between that device and everything else on the same distribution chain. Any protection change needs to be checked against the whole chain it sits within, not just judged on whether it solves the immediate problem.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Total versus partial selectivity, and why the distinction is practical, not academic</h2>
+        <p>Total selectivity means a downstream device will clear any fault up to its full rated capacity before the upstream device operates. Partial selectivity means this is only guaranteed up to a certain fault level, above which both devices may operate together. Which one a specific board actually achieves has to be read from its real discrimination study — it cannot be assumed from the type of device installed.</p>
+      </div></div>
+      <div class="card" style="margin-top:10px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to apply this to the four scenarios for Protection?</p>
+        <a href="scenario-13-protection-1.html" class="btn-cta">Begin Scenarios &rarr;</a>
+      </div>
+      <p class="prose" style="margin-top:20px;font-size:13.5px;color:#6B6B6B;">You can also go deeper into the
+      system reference &mdash; <a href="module-13-protection-overview.html">system overview, sources, failure modes and
+      restoration</a> &mdash; before starting the scenarios.</p>
+      <div class="pager">
+        <a href="modules.html">&larr; All Modules</a>
+        <a href="modules.html" class="to-index">Scenario Training</a>
+        <a href="scenario-13-protection-1.html">Scenarios &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Data Centre AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="powertec-training.html">Powertec Training</a></li>
+          <li><a href="skills-gap-analysis.html">Skills Gap Analysis</a></li>
+          <li><a href="platform.html">The Platform</a></li>
+          <li><a href="classroom.html">Classroom Learning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="field-evidence.html">Field Evidence Record</a></li>
+          <li><a href="drawing-library.html">Drawing Library</a></li>
+          <li><a href="platform.html">Training Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

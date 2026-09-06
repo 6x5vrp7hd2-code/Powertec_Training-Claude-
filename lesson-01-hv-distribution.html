@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson &mdash; HV Distribution | Powertec Training</title>
+<meta name="description" content="Powertec Training — Data Centre AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand-lockup">
+      <img src="logo-header.png" alt="Powertec">
+      <span class="division">training</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-panel" id="navPanel">
+      <a href="index.html">Home</a>
+      <a href="powertec-training.html">Powertec Training</a>
+      <a href="skills-gap-analysis.html">Skills Gap Analysis</a>
+      <a href="platform.html">The Platform</a>
+      <a href="classroom.html">Classroom Learning</a>
+      <a href="field-evidence.html">Field Evidence</a>
+      <a href="drawing-library.html">Drawing Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="classroom.html">Classroom Learning</a> &rsaquo; <a href="modules.html">Scenario Training</a> &rsaquo; HV Distribution</div>
+    <div class="eyebrow">Lesson &middot; Module 01</div>
+    <h1>HV Distribution</h1>
+    <p>Read this in full before attempting the scenarios below &mdash; they assume this material.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+      <div style="margin-bottom:26px;">
+        <h2>Why HV intake design matters here</h2>
+        <p>A DNO-trained SAP already understands HV switching. What's different in a data centre is the intent behind the design: intake arrangements exist specifically so that the loss of one source is invisible to the load. That only works if the two feeds are genuinely independent — different substations, different corridors, different protection zones. Reading an SLD correctly means tracing each feed all the way back to its origin, not stopping at the first RMU or ring unit that looks separate.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Shared upstream points — the hidden single point of failure</h2>
+        <p>The single most common design or documentation error in multi-infeed HV intakes is two feeds that appear independent on a simplified diagram but converge on a shared breaker, shared substation, or shared overhead corridor further upstream. This doesn't show up unless you deliberately trace both feeds to their true origin. Before relying on a second feed as genuine redundancy — for isolation planning, for risk assessment, or for describing the site's resilience to a client — confirm independence rather than assume it from the SLD's layout.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>DIESR in a resilient, multi-source context</h2>
+        <p>Dead, Isolated, Earthed, Screened, Recorded remains the sequence regardless of how many sources exist. What changes in a data centre is the discipline required before you even reach the isolation step: you must first establish every possible source of energy for the equipment in question, not just the one currently in service. An HV circuit fed from a single DNO connection has one source to isolate. An HV circuit on a resilient, multi-infeed site may have two live sources, a standby generation path, or an automatic transfer capability that can re-energise the isolated section if not accounted for.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Reading this site's HV intake correctly</h2>
+        <p>Before attempting the scenarios for this module, you should be able to point to this site's actual HV intake points on the SLD, name which substations or corridors each traces back to, and state — not assume — whether they share any common upstream point. This is exactly the skill the overlay method is built to develop: strip the HV intake down to its own diagram, trace every line back to source, and rebuild your understanding from that foundation before moving to the next overlay.</p>
+      </div></div>
+      <div class="card" style="margin-top:10px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to apply this to the four scenarios for HV Distribution?</p>
+        <a href="scenario-01-hv-distribution-1.html" class="btn-cta">Begin Scenarios &rarr;</a>
+      </div>
+      <p class="prose" style="margin-top:20px;font-size:13.5px;color:#6B6B6B;">You can also go deeper into the
+      system reference &mdash; <a href="module-01-hv-distribution-overview.html">system overview, sources, failure modes and
+      restoration</a> &mdash; before starting the scenarios.</p>
+      <div class="pager">
+        <a href="modules.html">&larr; All Modules</a>
+        <a href="modules.html" class="to-index">Scenario Training</a>
+        <a href="scenario-01-hv-distribution-1.html">Scenarios &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Data Centre AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="powertec-training.html">Powertec Training</a></li>
+          <li><a href="skills-gap-analysis.html">Skills Gap Analysis</a></li>
+          <li><a href="platform.html">The Platform</a></li>
+          <li><a href="classroom.html">Classroom Learning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="field-evidence.html">Field Evidence Record</a></li>
+          <li><a href="drawing-library.html">Drawing Library</a></li>
+          <li><a href="platform.html">Training Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

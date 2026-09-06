@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson &mdash; Mechanical Critical Supplies (AHU / CRAC) | Powertec Training</title>
+<meta name="description" content="Powertec Training — Data Centre AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand-lockup">
+      <img src="logo-header.png" alt="Powertec">
+      <span class="division">training</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-panel" id="navPanel">
+      <a href="index.html">Home</a>
+      <a href="powertec-training.html">Powertec Training</a>
+      <a href="skills-gap-analysis.html">Skills Gap Analysis</a>
+      <a href="platform.html">The Platform</a>
+      <a href="classroom.html">Classroom Learning</a>
+      <a href="field-evidence.html">Field Evidence</a>
+      <a href="drawing-library.html">Drawing Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="classroom.html">Classroom Learning</a> &rsaquo; <a href="modules.html">Scenario Training</a> &rsaquo; Mechanical Critical Supplies (AHU / CRAC)</div>
+    <div class="eyebrow">Lesson &middot; Module 10</div>
+    <h1>Mechanical Critical Supplies (AHU / CRAC)</h1>
+    <p>Read this in full before attempting the scenarios below &mdash; they assume this material.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+      <div style="margin-bottom:26px;">
+        <h2>Two separate systems sharing one piece of equipment</h2>
+        <p>An AHU or CRAC unit is simultaneously an electrical load and a mechanically and BMS-controlled device. Electrically isolating it removes its power supply; it does nothing to the control and interlock signals that govern whether the unit is permitted to run. Mechanically shutting it down does the reverse. Treating these as one combined isolation, rather than two separate ones that both need proving, is where this module's risk concentrates.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Why a unit can appear dead but still move</h2>
+        <p>If a fan, pump or damper continues to move after electrical isolation, the most likely explanations are that the wrong breaker was isolated, or that a mechanical drive connection exists that the electrical isolation was never going to touch. Residual momentum should decay quickly; continued movement is a signal to stop and re-verify the isolation, not a detail to note and continue past.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Defining the handover point, precisely</h2>
+        <p>Combined electrical and mechanical work depends on both permits agreeing, explicitly, on exactly where electrical responsibility ends and mechanical responsibility begins — typically at the local isolator and proving-dead point for electrical, with everything downstream (the fan, damper, pump internals and drive mechanism) under the mechanical permit. A handover point that exists only informally, rather than being written down and cross-referenced between the two permits, is a gap waiting to be found the hard way.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Reinstating control state, not just power</h2>
+        <p>A unit re-energised after work isn't safely back in service until it's also correctly reinstated into the BMS control loop. A unit that's electrically live but sitting outside its normal control sequence can behave unpredictably — running continuously, failing to start when needed, or simply not reflecting its true status to anyone monitoring the site remotely.</p>
+      </div></div>
+      <div class="card" style="margin-top:10px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to apply this to the four scenarios for Mechanical Critical Supplies (AHU / CRAC)?</p>
+        <a href="scenario-10-mechanical-critical-supplies-1.html" class="btn-cta">Begin Scenarios &rarr;</a>
+      </div>
+      <p class="prose" style="margin-top:20px;font-size:13.5px;color:#6B6B6B;">You can also go deeper into the
+      system reference &mdash; <a href="module-10-mechanical-critical-supplies-overview.html">system overview, sources, failure modes and
+      restoration</a> &mdash; before starting the scenarios.</p>
+      <div class="pager">
+        <a href="modules.html">&larr; All Modules</a>
+        <a href="modules.html" class="to-index">Scenario Training</a>
+        <a href="scenario-10-mechanical-critical-supplies-1.html">Scenarios &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Data Centre AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="powertec-training.html">Powertec Training</a></li>
+          <li><a href="skills-gap-analysis.html">Skills Gap Analysis</a></li>
+          <li><a href="platform.html">The Platform</a></li>
+          <li><a href="classroom.html">Classroom Learning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="field-evidence.html">Field Evidence Record</a></li>
+          <li><a href="drawing-library.html">Drawing Library</a></li>
+          <li><a href="platform.html">Training Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

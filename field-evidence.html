@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Evidence Record | Powertec Training</title>
+<meta name="description" content="Powertec Training — Data Centre AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand-lockup">
+      <img src="logo-header.png" alt="Powertec">
+      <span class="division">training</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-panel" id="navPanel">
+      <a href="index.html">Home</a>
+      <a href="powertec-training.html">Powertec Training</a>
+      <a href="skills-gap-analysis.html">Skills Gap Analysis</a>
+      <a href="platform.html">The Platform</a>
+      <a href="classroom.html">Classroom Learning</a>
+      <a href="field-evidence.html" class="current">Field Evidence</a>
+      <a href="drawing-library.html">Drawing Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+<div class="page-hero">
+  <div class="container">
+    
+    <div class="eyebrow">Evidence</div>
+    <h1>Field Evidence Record</h1>
+    <p>Plant operated, and safety documents issued and received &mdash; logged, verified and signed by the AP/SAP leading each task.</p>
+  </div>
+</div>
+
+<section class="block"><div class="container">
+  <div class="card" style="background:#1E1E1E;border-color:#1E1E1E;margin-bottom:26px;">
+    <p style="color:#E6E6E6;margin:0;">This is a static site with no backend, so entries below are saved to your
+    browser only (via local storage) and any file attached is not actually uploaded anywhere. Before this goes live
+    for real trainees, this page needs a real backend or a connector (a form service, a database, or Google Drive)
+    so evidence is centrally stored, verifiable, and survives a change of device.</p>
+  </div>
+
+  <h2>Plant operated</h2>
+  <p class="prose">Log the type, make and model of each item of plant you operate on, LV and HV.</p>
+  <div class="card" style="max-width:720px;">
+    <div class="grid cols-2">
+      <input type="text" data-track-field="fe-plant-type" placeholder="Plant type (e.g. UPS, ATS, LV switchboard)">
+      <input type="text" data-track-field="fe-plant-makemodel" placeholder="Make &amp; model">
+    </div>
+    <textarea rows="3" style="margin-top:12px;" data-track-field="fe-plant-notes" placeholder="Activity notes..."></textarea>
+    <input type="file" style="margin-top:12px;" disabled title="File upload requires a backend — see note above">
+  </div>
+
+  <h2 style="margin-top:36px;">Safety document issue / receipt</h2>
+  <div class="grid cols-3">
+    <div class="card">
+      <div class="meta">PTW</div>
+      <h3>Permit to Work</h3>
+      <textarea rows="3" data-track-field="fe-ptw" placeholder="Reference, date, plant, issued by / received by..."></textarea>
+    </div>
+    <div class="card">
+      <div class="meta">SFT</div>
+      <h3>Sanction for Test</h3>
+      <textarea rows="3" data-track-field="fe-sft" placeholder="Reference, date, plant, issued by / received by..."></textarea>
+    </div>
+    <div class="card">
+      <div class="meta">LOA</div>
+      <h3>Limitation of Access</h3>
+      <textarea rows="3" data-track-field="fe-loa" placeholder="Reference, date, plant, issued by / received by..."></textarea>
+    </div>
+  </div>
+
+  <h2 style="margin-top:36px;">Field asset operation document</h2>
+  <p class="prose">One entry per activity: job requirement, isolation, earthing, testing, documents used and items
+  of plant involved &mdash; verified and signed by the AP/SAP leading the task.</p>
+  <div class="card" style="max-width:720px;">
+    <textarea rows="6" data-track-field="fe-asset-op" placeholder="Job requirement / isolation-earthing-testing sequence / documents used / plant involved..."></textarea>
+    <input type="text" style="margin-top:12px;" data-track-field="fe-asset-signoff" placeholder="Verified and signed by (AP/SAP name and date)">
+  </div>
+
+  <p class="prose" style="margin-top:30px;">This log feeds the required evidence targets on the
+  <a href="platform.html">Training Dashboard</a>.</p>
+</div></section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Data Centre AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="powertec-training.html">Powertec Training</a></li>
+          <li><a href="skills-gap-analysis.html">Skills Gap Analysis</a></li>
+          <li><a href="platform.html">The Platform</a></li>
+          <li><a href="classroom.html">Classroom Learning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="field-evidence.html">Field Evidence Record</a></li>
+          <li><a href="drawing-library.html">Drawing Library</a></li>
+          <li><a href="platform.html">Training Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

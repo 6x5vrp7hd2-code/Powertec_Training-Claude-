@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson &mdash; Transformers | Powertec Training</title>
+<meta name="description" content="Powertec Training — Data Centre AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand-lockup">
+      <img src="logo-header.png" alt="Powertec">
+      <span class="division">training</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-panel" id="navPanel">
+      <a href="index.html">Home</a>
+      <a href="powertec-training.html">Powertec Training</a>
+      <a href="skills-gap-analysis.html">Skills Gap Analysis</a>
+      <a href="platform.html">The Platform</a>
+      <a href="classroom.html">Classroom Learning</a>
+      <a href="field-evidence.html">Field Evidence</a>
+      <a href="drawing-library.html">Drawing Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="classroom.html">Classroom Learning</a> &rsaquo; <a href="modules.html">Scenario Training</a> &rsaquo; Transformers</div>
+    <div class="eyebrow">Lesson &middot; Module 02</div>
+    <h1>Transformers</h1>
+    <p>Read this in full before attempting the scenarios below &mdash; they assume this material.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+      <div style="margin-bottom:26px;">
+        <h2>The conversion point, and why direction matters</h2>
+        <p>A transformer's HV side and LV side behave very differently when you're isolating for work. HV-trained engineers instinctively think of energy flowing one way — from the network into the site. In a data centre, a transformer's LV side can be a genuine second source of energisation, because LV boards are frequently paralleled, bus-tied, or backed by generation. Isolating a transformer means considering both directions, not just the direction power normally flows.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Backfeed through the windings</h2>
+        <p>A transformer's windings don't stop conducting just because the HV breaker is open. If the LV side remains connected to a live bus — through a bus-tie, a parallel transformer, or a generator connection — voltage can appear back at the HV terminals through the winding's transformation ratio, even with the HV switch fully open. This is precisely why HV isolation of a transformer is never sufficient on its own in a resilient LV design; the LV side has to be isolated, proven dead, and earthed as a separate step.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Redundancy arrangements: 1-for-1 versus N+1</h2>
+        <p>Some sites pair each transformer directly with its own LV board; others run transformers in an N+1 arrangement where several transformers share a common bus with spare capacity built in. The arrangement changes what 'isolating a transformer' actually removes from service, and it changes what backfeed paths exist. Knowing which arrangement applies to a given transformer on this site is a precondition for planning its isolation safely, not a detail to work out afterwards.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Proving dead on both sides, and what commissioning checks confirm</h2>
+        <p>A transformer isolation isn't complete until both the HV and LV sides have been independently proven dead and earthed. Separately, when a transformer is newly commissioned or being paralleled with an existing unit, the checks that matter — phase rotation, vector group, voltage and phase-angle synchronisation, and protection coordination — exist because getting any one of them wrong risks closing two out-of-step sources together, which is a fault condition, not a successful energisation.</p>
+      </div></div>
+      <div class="card" style="margin-top:10px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to apply this to the four scenarios for Transformers?</p>
+        <a href="scenario-02-transformers-1.html" class="btn-cta">Begin Scenarios &rarr;</a>
+      </div>
+      <p class="prose" style="margin-top:20px;font-size:13.5px;color:#6B6B6B;">You can also go deeper into the
+      system reference &mdash; <a href="module-02-transformers-overview.html">system overview, sources, failure modes and
+      restoration</a> &mdash; before starting the scenarios.</p>
+      <div class="pager">
+        <a href="modules.html">&larr; All Modules</a>
+        <a href="modules.html" class="to-index">Scenario Training</a>
+        <a href="scenario-02-transformers-1.html">Scenarios &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Data Centre AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="powertec-training.html">Powertec Training</a></li>
+          <li><a href="skills-gap-analysis.html">Skills Gap Analysis</a></li>
+          <li><a href="platform.html">The Platform</a></li>
+          <li><a href="classroom.html">Classroom Learning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="field-evidence.html">Field Evidence Record</a></li>
+          <li><a href="drawing-library.html">Drawing Library</a></li>
+          <li><a href="platform.html">Training Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

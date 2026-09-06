@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson &mdash; Battery Systems | Powertec Training</title>
+<meta name="description" content="Powertec Training — Data Centre AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand-lockup">
+      <img src="logo-header.png" alt="Powertec">
+      <span class="division">training</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-panel" id="navPanel">
+      <a href="index.html">Home</a>
+      <a href="powertec-training.html">Powertec Training</a>
+      <a href="skills-gap-analysis.html">Skills Gap Analysis</a>
+      <a href="platform.html">The Platform</a>
+      <a href="classroom.html">Classroom Learning</a>
+      <a href="field-evidence.html">Field Evidence</a>
+      <a href="drawing-library.html">Drawing Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="classroom.html">Classroom Learning</a> &rsaquo; <a href="modules.html">Scenario Training</a> &rsaquo; Battery Systems</div>
+    <div class="eyebrow">Lesson &middot; Module 07</div>
+    <h1>Battery Systems</h1>
+    <p>Read this in full before attempting the scenarios below &mdash; they assume this material.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+      <div style="margin-bottom:26px;">
+        <h2>A battery is a source, not a load — say it plainly</h2>
+        <p>Every other piece of equipment in this programme can, in principle, be isolated from its supply. A battery cannot be isolated from itself. Disconnecting it from the DC bus removes its connection to the rest of the circuit, but the chemical reaction generating voltage inside the cells continues regardless. This single distinction is the reason battery work is treated differently from every other isolation in this programme.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Stored energy that isolation procedures don't remove</h2>
+        <p>A disconnected string still presents a genuine arc-flash and shock hazard at its own terminals, because the stored energy hasn't gone anywhere — it's simply no longer connected to the DC bus. Any procedure that treats 'disconnected' as equivalent to 'safe' is missing this distinction. Safe battery work depends on manufacturer-specific handling procedures, not on the standard isolate-prove-earth sequence used elsewhere.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Chemistry changes the hazard profile</h2>
+        <p>VRLA and lithium-ion batteries fail differently, and treating them identically is itself a hazard. Lithium-ion carries a materially higher thermal runaway and fire risk, with suppression and reignition considerations that don't apply in the same way to VRLA. Knowing which chemistry is installed on a given string — and what that specifically changes about the response to an alarm or a fault — is a precondition for working safely around it.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Reconnection is a checked event, not a formality</h2>
+        <p>Bringing a battery string back onto a live DC bus after maintenance requires confirming correct polarity, string integrity, and a state of charge close enough to the rest of the bus to avoid a large circulating current. A string reconnected without these checks isn't just a paperwork gap — a reversed or damaged string closed onto a live bus is a genuine fault condition, not a completed maintenance task.</p>
+      </div></div>
+      <div class="card" style="margin-top:10px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to apply this to the four scenarios for Battery Systems?</p>
+        <a href="scenario-07-battery-systems-1.html" class="btn-cta">Begin Scenarios &rarr;</a>
+      </div>
+      <p class="prose" style="margin-top:20px;font-size:13.5px;color:#6B6B6B;">You can also go deeper into the
+      system reference &mdash; <a href="module-07-battery-systems-overview.html">system overview, sources, failure modes and
+      restoration</a> &mdash; before starting the scenarios.</p>
+      <div class="pager">
+        <a href="modules.html">&larr; All Modules</a>
+        <a href="modules.html" class="to-index">Scenario Training</a>
+        <a href="scenario-07-battery-systems-1.html">Scenarios &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Data Centre AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="powertec-training.html">Powertec Training</a></li>
+          <li><a href="skills-gap-analysis.html">Skills Gap Analysis</a></li>
+          <li><a href="platform.html">The Platform</a></li>
+          <li><a href="classroom.html">Classroom Learning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="field-evidence.html">Field Evidence Record</a></li>
+          <li><a href="drawing-library.html">Drawing Library</a></li>
+          <li><a href="platform.html">Training Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson &mdash; Static Bypass / Maintenance Bypass | Powertec Training</title>
+<meta name="description" content="Powertec Training — Data Centre AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand-lockup">
+      <img src="logo-header.png" alt="Powertec">
+      <span class="division">training</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-panel" id="navPanel">
+      <a href="index.html">Home</a>
+      <a href="powertec-training.html">Powertec Training</a>
+      <a href="skills-gap-analysis.html">Skills Gap Analysis</a>
+      <a href="platform.html">The Platform</a>
+      <a href="classroom.html">Classroom Learning</a>
+      <a href="field-evidence.html">Field Evidence</a>
+      <a href="drawing-library.html">Drawing Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="classroom.html">Classroom Learning</a> &rsaquo; <a href="modules.html">Scenario Training</a> &rsaquo; Static Bypass / Maintenance Bypass</div>
+    <div class="eyebrow">Lesson &middot; Module 08</div>
+    <h1>Static Bypass / Maintenance Bypass</h1>
+    <p>Read this in full before attempting the scenarios below &mdash; they assume this material.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+      <div style="margin-bottom:26px;">
+        <h2>Two bypass paths, two different jobs</h2>
+        <p>Static bypass and maintenance bypass share the word 'bypass' and very little else. Static bypass is automatic, fast — a few milliseconds — and exists purely to protect the load during a UPS fault or overload. Maintenance bypass is manual, deliberate, and exists purely to make the UPS itself safe to open for hands-on work. Confusing the two, or assuming one implies the other, is the core error this module is built around.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>What both paths have in common — and what that costs the load</h2>
+        <p>Both bypass paths ultimately source from the same raw mains feed that supplies the UPS's rectifier. Load running on either bypass path has none of the UPS's conditioning and no battery backup behind it — it is exposed directly to whatever the mains supply is doing. This is a deliberate, accepted trade-off during planned maintenance, not an oversight, but it needs to be understood as a real reduction in protection for as long as bypass is engaged.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Sequencing into maintenance bypass without a gap</h2>
+        <p>Moving a UPS into maintenance bypass correctly means transferring the load onto bypass first, closing the maintenance bypass breaker to establish a second, independent path to the load, and only then opening the UPS's own input and output breakers. Done in this order, the two paths briefly overlap rather than leaving a moment with no path at all — which is the entire point of the sequence.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Sequencing back out, and why it's not just the reverse</h2>
+        <p>Returning from maintenance bypass to normal running requires confirming the UPS itself is healthy and synchronised to the bypass source before closing its input and output breakers, and only removing the maintenance bypass path once the UPS is confirmed to be carrying load correctly. Reversing the entry sequence carelessly risks a moment with no source at all — precisely the outage the whole UPS system exists to prevent.</p>
+      </div></div>
+      <div class="card" style="margin-top:10px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to apply this to the four scenarios for Static Bypass / Maintenance Bypass?</p>
+        <a href="scenario-08-static-maintenance-bypass-1.html" class="btn-cta">Begin Scenarios &rarr;</a>
+      </div>
+      <p class="prose" style="margin-top:20px;font-size:13.5px;color:#6B6B6B;">You can also go deeper into the
+      system reference &mdash; <a href="module-08-static-maintenance-bypass-overview.html">system overview, sources, failure modes and
+      restoration</a> &mdash; before starting the scenarios.</p>
+      <div class="pager">
+        <a href="modules.html">&larr; All Modules</a>
+        <a href="modules.html" class="to-index">Scenario Training</a>
+        <a href="scenario-08-static-maintenance-bypass-1.html">Scenarios &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Data Centre AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="powertec-training.html">Powertec Training</a></li>
+          <li><a href="skills-gap-analysis.html">Skills Gap Analysis</a></li>
+          <li><a href="platform.html">The Platform</a></li>
+          <li><a href="classroom.html">Classroom Learning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="field-evidence.html">Field Evidence Record</a></li>
+          <li><a href="drawing-library.html">Drawing Library</a></li>
+          <li><a href="platform.html">Training Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

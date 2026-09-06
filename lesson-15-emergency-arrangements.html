@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson &mdash; Emergency Arrangements | Powertec Training</title>
+<meta name="description" content="Powertec Training — Data Centre AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand-lockup">
+      <img src="logo-header.png" alt="Powertec">
+      <span class="division">training</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-panel" id="navPanel">
+      <a href="index.html">Home</a>
+      <a href="powertec-training.html">Powertec Training</a>
+      <a href="skills-gap-analysis.html">Skills Gap Analysis</a>
+      <a href="platform.html">The Platform</a>
+      <a href="classroom.html">Classroom Learning</a>
+      <a href="field-evidence.html">Field Evidence</a>
+      <a href="drawing-library.html">Drawing Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="classroom.html">Classroom Learning</a> &rsaquo; <a href="modules.html">Scenario Training</a> &rsaquo; Emergency Arrangements</div>
+    <div class="eyebrow">Lesson &middot; Module 15</div>
+    <h1>Emergency Arrangements</h1>
+    <p>Read this in full before attempting the scenarios below &mdash; they assume this material.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+      <div style="margin-bottom:26px;">
+        <h2>Deliberately simple, and exactly where mistakes get expensive</h2>
+        <p>An EPO system is designed to be simple to activate in a genuine emergency — which is precisely what makes accidental activation so damaging and, unfortunately, common. Historically, confusing an EPO button with a door-release button is one of the most frequent causes of entirely unplanned, high-impact data centre outages across the industry, not a rare or unusual failure mode.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>What actually happens on activation is a site-specific design choice</h2>
+        <p>EPO activation typically works by de-energising upstream contactors rather than tripping every individual breaker, but exactly what's included — IT load only, CRAC and AHU units too, UPS bypass paths — is decided by this site's specific design, not by a universal standard. In the UK and EU, EPO isn't even always a code requirement in the way it historically has been in the US. Assuming you know the scope from experience on another site is a genuine risk.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Why recovery isn't just switching things back on</h2>
+        <p>An EPO event frequently leaves equipment — UPS units especially — in an unexpected or uncontrolled state, such as an unplanned bypass condition, because the event interrupted whatever sequence was running at the time. Recovery has to be a full, controlled, sequenced restart that re-establishes each system's correct configuration step by step, not a single action that assumes everything will resume exactly as it was.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Knowing the arrangement before you need it</h2>
+        <p>The value of walking every EPO device's exact location, appearance and scope is that this knowledge is useless if it has to be worked out during a genuine emergency. This is the one module in the programme where the practical exposure objective is explicitly not a live test, but a documented, unhurried walk-through — because the moment this knowledge actually matters is the worst possible time to be learning it.</p>
+      </div></div>
+      <div class="card" style="margin-top:10px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to apply this to the four scenarios for Emergency Arrangements?</p>
+        <a href="scenario-15-emergency-arrangements-1.html" class="btn-cta">Begin Scenarios &rarr;</a>
+      </div>
+      <p class="prose" style="margin-top:20px;font-size:13.5px;color:#6B6B6B;">You can also go deeper into the
+      system reference &mdash; <a href="module-15-emergency-arrangements-overview.html">system overview, sources, failure modes and
+      restoration</a> &mdash; before starting the scenarios.</p>
+      <div class="pager">
+        <a href="modules.html">&larr; All Modules</a>
+        <a href="modules.html" class="to-index">Scenario Training</a>
+        <a href="scenario-15-emergency-arrangements-1.html">Scenarios &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Data Centre AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="powertec-training.html">Powertec Training</a></li>
+          <li><a href="skills-gap-analysis.html">Skills Gap Analysis</a></li>
+          <li><a href="platform.html">The Platform</a></li>
+          <li><a href="classroom.html">Classroom Learning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="field-evidence.html">Field Evidence Record</a></li>
+          <li><a href="drawing-library.html">Drawing Library</a></li>
+          <li><a href="platform.html">Training Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

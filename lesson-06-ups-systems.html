@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson &mdash; UPS Systems | Powertec Training</title>
+<meta name="description" content="Powertec Training — Data Centre AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand-lockup">
+      <img src="logo-header.png" alt="Powertec">
+      <span class="division">training</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-panel" id="navPanel">
+      <a href="index.html">Home</a>
+      <a href="powertec-training.html">Powertec Training</a>
+      <a href="skills-gap-analysis.html">Skills Gap Analysis</a>
+      <a href="platform.html">The Platform</a>
+      <a href="classroom.html">Classroom Learning</a>
+      <a href="field-evidence.html">Field Evidence</a>
+      <a href="drawing-library.html">Drawing Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="classroom.html">Classroom Learning</a> &rsaquo; <a href="modules.html">Scenario Training</a> &rsaquo; UPS Systems</div>
+    <div class="eyebrow">Lesson &middot; Module 06</div>
+    <h1>UPS Systems</h1>
+    <p>Read this in full before attempting the scenarios below &mdash; they assume this material.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+      <div style="margin-bottom:26px;">
+        <h2>Multiple simultaneous power paths — the concept with no HV equivalent</h2>
+        <p>HV switching deals with one path at a time: a circuit is either fed from this source or that one. A UPS runs multiple paths simultaneously by design — the rectifier charging the battery while the inverter supplies the load, with a static bypass path standing by in parallel. There is no single moment where 'the UPS' is definitively on one source, which is exactly why isolation planning for a UPS requires a different mental model than HV switching does.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>What 'in bypass' does and doesn't tell you</h2>
+        <p>When a UPS transfers to static bypass — automatically, in milliseconds, during a fault or overload — the load's dependency on the inverter is removed. Nothing else changes. The rectifier, the inverter, and critically the battery string remain exactly as energised as they were before the transfer. 'The UPS is on bypass' is a statement about the load path, not a statement about whether the UPS itself is safe to open.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Maintenance bypass as a distinct, deliberate state</h2>
+        <p>Maintenance bypass is a manually operated path that removes the UPS's power electronics from the circuit entirely, and it's the only one of the UPS's operating states that makes internal work possible. Getting into and out of maintenance bypass correctly is a sequenced, monitored process — not a single switch — because an uncontrolled transfer risks a gap in supply or an inrush transient that the static bypass circuitry is specifically designed to manage during normal automatic transfers.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Why the battery is the step that's easiest to skip</h2>
+        <p>Even after a UPS is correctly placed in maintenance bypass, the battery string remains a live source in its own right, connected to the DC bus until it is separately isolated. Because the load has already visibly transferred away and the front panel may show the unit as 'in bypass', it's easy to treat the job as finished at that point. The battery isolation is a distinct, necessary step — not an implied consequence of the earlier ones.</p>
+      </div></div>
+      <div class="card" style="margin-top:10px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to apply this to the four scenarios for UPS Systems?</p>
+        <a href="scenario-06-ups-systems-1.html" class="btn-cta">Begin Scenarios &rarr;</a>
+      </div>
+      <p class="prose" style="margin-top:20px;font-size:13.5px;color:#6B6B6B;">You can also go deeper into the
+      system reference &mdash; <a href="module-06-ups-systems-overview.html">system overview, sources, failure modes and
+      restoration</a> &mdash; before starting the scenarios.</p>
+      <div class="pager">
+        <a href="modules.html">&larr; All Modules</a>
+        <a href="modules.html" class="to-index">Scenario Training</a>
+        <a href="scenario-06-ups-systems-1.html">Scenarios &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Data Centre AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="powertec-training.html">Powertec Training</a></li>
+          <li><a href="skills-gap-analysis.html">Skills Gap Analysis</a></li>
+          <li><a href="platform.html">The Platform</a></li>
+          <li><a href="classroom.html">Classroom Learning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="field-evidence.html">Field Evidence Record</a></li>
+          <li><a href="drawing-library.html">Drawing Library</a></li>
+          <li><a href="platform.html">Training Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

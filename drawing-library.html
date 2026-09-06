@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drawing Library | Powertec Training</title>
+<meta name="description" content="Powertec Training — Data Centre AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand-lockup">
+      <img src="logo-header.png" alt="Powertec">
+      <span class="division">training</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-panel" id="navPanel">
+      <a href="index.html">Home</a>
+      <a href="powertec-training.html">Powertec Training</a>
+      <a href="skills-gap-analysis.html">Skills Gap Analysis</a>
+      <a href="platform.html">The Platform</a>
+      <a href="classroom.html">Classroom Learning</a>
+      <a href="field-evidence.html">Field Evidence</a>
+      <a href="drawing-library.html" class="current">Drawing Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+<div class="page-hero">
+  <div class="container">
+    
+    <div class="eyebrow">Reference</div>
+    <h1>Drawing Library & SLD Construction</h1>
+    <p>The overlay drawings built module by module, and this site's single-line diagrams as they're constructed and corrected.</p>
+  </div>
+</div>
+
+<section class="block"><div class="container">
+  <div class="card" style="background:#1E1E1E;border-color:#1E1E1E;margin-bottom:26px;">
+    <p style="color:#E6E6E6;margin:0;">As with Field Evidence, drawing uploads need a real backend before they can
+    be stored centrally &mdash; this page currently only tracks which overlay drawings are outstanding.</p>
+  </div>
+  <h2>Overlay drawing targets</h2>
+  <p class="prose">Each scenario-training module specifies the overlay drawing it expects as evidence. Produce your
+  own version before checking it against this site's actual SLD.</p>
+  <div class="grid cols-3">
+  <div class="card">
+    <div class="meta">Overlay 1 &middot; Module 01</div>
+    <h3>HV Distribution</h3>
+    <p>Draw the HV intake-to-transformer chain from memory, including both feeds and their physical separation.</p>
+    <a href="lesson-01-hv-distribution.html" class="card-link">Open lesson &rarr;</a>
+  </div>
+  <div class="card">
+    <div class="meta">Overlay 1 &middot; Module 02</div>
+    <h3>Transformers</h3>
+    <p>For one transformer, draw every possible source of energisation &mdash; HV side, LV side, and any parallel path.</p>
+    <a href="lesson-02-transformers.html" class="card-link">Open lesson &rarr;</a>
+  </div>
+  <div class="card">
+    <div class="meta">Overlay 2 &middot; Module 03</div>
+    <h3>LV Main Distribution</h3>
+    <p>Trace one LV board from incomer to final load, overlay-style, marking every bus-tie and bus-section breaker.</p>
+    <a href="lesson-03-lv-main-distribution.html" class="card-link">Open lesson &rarr;</a>
+  </div>
+  <div class="card">
+    <div class="meta">Overlay 2 &middot; Module 04</div>
+    <h3>Resilient Paths</h3>
+    <p>Diagram A/B supplies, bus couplers, alternate feeds and transfer arrangements for one cell.</p>
+    <a href="lesson-04-resilient-paths.html" class="card-link">Open lesson &rarr;</a>
+  </div>
+  <div class="card">
+    <div class="meta">Overlay 3 &middot; Module 05</div>
+    <h3>Multiple Infeeds / Backfeeds</h3>
+    <p>Pick one critical load and trace every redundant path feeding it, marking where paths share a common upstream point.</p>
+    <a href="lesson-05-multiple-infeeds.html" class="card-link">Open lesson &rarr;</a>
+  </div>
+  <div class="card">
+    <div class="meta">Overlay 4 &middot; Module 06</div>
+    <h3>UPS Systems</h3>
+    <p>Diagram normal, static bypass, and maintenance-bypass paths for one UPS module, marking every isolation point.</p>
+    <a href="lesson-06-ups-systems.html" class="card-link">Open lesson &rarr;</a>
+  </div>
+  <div class="card">
+    <div class="meta">Overlay 4 &middot; Module 07</div>
+    <h3>Battery Systems</h3>
+    <p>Diagram the DC bus from battery string to inverter, marking string-level and cell-level isolation points.</p>
+    <a href="lesson-07-battery-systems.html" class="card-link">Open lesson &rarr;</a>
+  </div>
+  <div class="card">
+    <div class="meta">Overlay 4 &middot; Module 08</div>
+    <h3>Static Bypass / Maintenance Bypass</h3>
+    <p>Diagram both bypass paths separately, labelling which protects the load and which enables hands-on work.</p>
+    <a href="lesson-08-static-maintenance-bypass.html" class="card-link">Open lesson &rarr;</a>
+  </div>
+  <div class="card">
+    <div class="meta">Overlay 5 &middot; Module 09</div>
+    <h3>ATS / STS and Alternate Supplies</h3>
+    <p>Diagram Source A, Source B, and the load path through one ATS or STS unit.</p>
+    <a href="lesson-09-ats-sts.html" class="card-link">Open lesson &rarr;</a>
+  </div>
+  <div class="card">
+    <div class="meta">Overlay 6 &middot; Module 10</div>
+    <h3>Mechanical Critical Supplies (AHU / CRAC)</h3>
+    <p>Map electrical supply points into one AHU or CRAC unit alongside its control interlocks.</p>
+    <a href="lesson-10-mechanical-critical-supplies.html" class="card-link">Open lesson &rarr;</a>
+  </div>
+  <div class="card">
+    <div class="meta">Overlay 6 &middot; Module 11</div>
+    <h3>Interlocking</h3>
+    <p>Diagram one interlocked switching sequence, such as a bus-tie/incomer scheme, and the specific dangerous configurations the interlock exists to prevent.</p>
+    <a href="lesson-11-interlocking.html" class="card-link">Open lesson &rarr;</a>
+  </div>
+  <div class="card">
+    <div class="meta">Overlay 7 &middot; Module 12</div>
+    <h3>Load Banks</h3>
+    <p>Diagram the full load-bank connection sequence for one test scenario, start to finish, including every isolation and earthing step.</p>
+    <a href="lesson-12-load-banks.html" class="card-link">Open lesson &rarr;</a>
+  </div>
+  <div class="card">
+    <div class="meta">Overlay 8 &middot; Module 13</div>
+    <h3>Protection</h3>
+    <p>Diagram the protection discrimination chain from one final circuit back to the main incomer, marking each device's settings.</p>
+    <a href="lesson-13-protection.html" class="card-link">Open lesson &rarr;</a>
+  </div>
+  <div class="card">
+    <div class="meta">Overlay 8 &middot; Module 14</div>
+    <h3>Control and Monitoring</h3>
+    <p>Map which BMS/DCIM points correspond to which physical isolation points across one cell.</p>
+    <a href="lesson-14-control-monitoring.html" class="card-link">Open lesson &rarr;</a>
+  </div>
+  <div class="card">
+    <div class="meta">Overlay 8 &middot; Module 15</div>
+    <h3>Emergency Arrangements</h3>
+    <p>Map every EPO device, or equivalent emergency arrangement, on site and precisely what each one de-energises.</p>
+    <a href="lesson-15-emergency-arrangements.html" class="card-link">Open lesson &rarr;</a>
+  </div></div>
+
+  <h2 style="margin-top:36px;">Add a drawing</h2>
+  <div class="card" style="max-width:720px;">
+    <input type="text" data-track-field="dl-title" placeholder="Drawing title (e.g. Cell 3 — LV Resilient Paths)">
+    <input type="file" style="margin-top:12px;" disabled title="File upload requires a backend — see note above">
+    <textarea rows="3" style="margin-top:12px;" data-track-field="dl-notes" placeholder="Notes on this drawing..."></textarea>
+  </div>
+</div></section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Data Centre AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="powertec-training.html">Powertec Training</a></li>
+          <li><a href="skills-gap-analysis.html">Skills Gap Analysis</a></li>
+          <li><a href="platform.html">The Platform</a></li>
+          <li><a href="classroom.html">Classroom Learning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="field-evidence.html">Field Evidence Record</a></li>
+          <li><a href="drawing-library.html">Drawing Library</a></li>
+          <li><a href="platform.html">Training Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson &mdash; ATS / STS and Alternate Supplies | Powertec Training</title>
+<meta name="description" content="Powertec Training — Data Centre AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand-lockup">
+      <img src="logo-header.png" alt="Powertec">
+      <span class="division">training</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-panel" id="navPanel">
+      <a href="index.html">Home</a>
+      <a href="powertec-training.html">Powertec Training</a>
+      <a href="skills-gap-analysis.html">Skills Gap Analysis</a>
+      <a href="platform.html">The Platform</a>
+      <a href="classroom.html">Classroom Learning</a>
+      <a href="field-evidence.html">Field Evidence</a>
+      <a href="drawing-library.html">Drawing Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="classroom.html">Classroom Learning</a> &rsaquo; <a href="modules.html">Scenario Training</a> &rsaquo; ATS / STS and Alternate Supplies</div>
+    <div class="eyebrow">Lesson &middot; Module 09</div>
+    <h1>ATS / STS and Alternate Supplies</h1>
+    <p>Read this in full before attempting the scenarios below &mdash; they assume this material.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+      <div style="margin-bottom:26px;">
+        <h2>The mechanism, not just the concept, of resilient paths</h2>
+        <p>Resilient paths only work in practice because of the switching device that actually executes a transfer between sources. An ATS uses electromechanical contactors and typically interrupts supply briefly during transfer — on the order of 50 to 100 milliseconds. An STS uses solid-state switching and transfers within a fraction of a cycle, fast enough to be effectively seamless to IT load, which is why STS is the standard choice for dual-corded critical loads while ATS remains common on generator-side and less transfer-sensitive circuits.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Make-before-break versus break-before-make</h2>
+        <p>A make-before-break transfer briefly connects both sources to the load in parallel — a genuine paralleling event, made safe only because the switch has already confirmed both sources are synchronised in voltage, frequency and phase before allowing the overlap. A break-before-make transfer avoids paralleling entirely but introduces a short interruption instead. Knowing which mode a given unit uses changes what 'isolated' and 'safe to test' actually mean during that transfer.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Modes that defeat the whole point of the device</h2>
+        <p>An ATS or STS left in manual or inhibited mode after maintenance will not transfer automatically on a real fault, no matter how healthy the standby source is. This is one of the most consequential and most avoidable failures in the entire programme: the device works perfectly, the standby source is healthy, and the load still drops, because nobody re-armed automatic mode before closing out the permit.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Diagnosing a failed transfer without assuming a fault</h2>
+        <p>When a transfer switch doesn't transfer during a test, the instinct is to assume the switch has failed. The more reliable first step is to check whether it's simply in manual or inhibited mode, whether both sources are actually presenting healthy voltage to it, and whether an interlock or permissive signal is blocking the transfer — because these explanations are both more common and easier to fix than an internal fault.</p>
+      </div></div>
+      <div class="card" style="margin-top:10px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to apply this to the four scenarios for ATS / STS and Alternate Supplies?</p>
+        <a href="scenario-09-ats-sts-1.html" class="btn-cta">Begin Scenarios &rarr;</a>
+      </div>
+      <p class="prose" style="margin-top:20px;font-size:13.5px;color:#6B6B6B;">You can also go deeper into the
+      system reference &mdash; <a href="module-09-ats-sts-overview.html">system overview, sources, failure modes and
+      restoration</a> &mdash; before starting the scenarios.</p>
+      <div class="pager">
+        <a href="modules.html">&larr; All Modules</a>
+        <a href="modules.html" class="to-index">Scenario Training</a>
+        <a href="scenario-09-ats-sts-1.html">Scenarios &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Data Centre AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="powertec-training.html">Powertec Training</a></li>
+          <li><a href="skills-gap-analysis.html">Skills Gap Analysis</a></li>
+          <li><a href="platform.html">The Platform</a></li>
+          <li><a href="classroom.html">Classroom Learning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="field-evidence.html">Field Evidence Record</a></li>
+          <li><a href="drawing-library.html">Drawing Library</a></li>
+          <li><a href="platform.html">Training Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

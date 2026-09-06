@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson &mdash; LV Main Distribution | Powertec Training</title>
+<meta name="description" content="Powertec Training — Data Centre AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand-lockup">
+      <img src="logo-header.png" alt="Powertec">
+      <span class="division">training</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-panel" id="navPanel">
+      <a href="index.html">Home</a>
+      <a href="powertec-training.html">Powertec Training</a>
+      <a href="skills-gap-analysis.html">Skills Gap Analysis</a>
+      <a href="platform.html">The Platform</a>
+      <a href="classroom.html">Classroom Learning</a>
+      <a href="field-evidence.html">Field Evidence</a>
+      <a href="drawing-library.html">Drawing Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="classroom.html">Classroom Learning</a> &rsaquo; <a href="modules.html">Scenario Training</a> &rsaquo; LV Main Distribution</div>
+    <div class="eyebrow">Lesson &middot; Module 03</div>
+    <h1>LV Main Distribution</h1>
+    <p>Read this in full before attempting the scenarios below &mdash; they assume this material.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+      <div style="margin-bottom:26px;">
+        <h2>One board can be two systems wearing one cabinet</h2>
+        <p>The most important habit to build for LV main distribution is treating a board's bus-tie as a genuine boundary, not a formality. With the bus-tie closed, a board with two incomers behaves as one electrically joined system — isolating one incomer doesn't de-energise anything, because the other incomer, connected through the tie, keeps the whole board live. With the tie open, the same board is genuinely two separate systems. Which state the tie is in changes everything about what 'isolated' means.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Why proving dead can still surprise you</h2>
+        <p>Even experienced engineers occasionally find unexpected voltage during proving dead on an LV board that should, on paper, be isolated. This is never a reason to assume the test equipment is at fault. It's a signal to stop and systematically re-check every possible source — the bus-tie position, a second infeed, a generator connection, or a transformer backfeed — before proceeding. The habit of treating an unexpected reading as informative rather than as noise is one of the most valuable things a DNO background does *not* automatically transfer into a data centre.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Switching sequences that preserve supply</h2>
+        <p>Isolating one incomer on a dual-fed board without dropping the load means understanding the correct order of operations: confirming the adjacent section or source can carry the combined load, then opening and locking off the target incomer, then proving dead and earthing it — all while the bus-tie keeps the board live from the other side. Getting the sequence right is what allows planned maintenance without an outage; getting it wrong either drops load unnecessarily or leaves the target incomer live.</p>
+      </div>
+      <div style="margin-bottom:26px;">
+        <h2>Returning to normal running, not just 'energised'</h2>
+        <p>A board that has been restored after work should be returned to its documented normal running configuration — which usually means both incomers live and the bus-tie open, not left in whatever as-tested state happened to exist when the work finished. A board left in an unusual but technically 'working' configuration quietly erodes the redundancy the design intended, often without anyone noticing until the moment it's needed.</p>
+      </div></div>
+      <div class="card" style="margin-top:10px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to apply this to the four scenarios for LV Main Distribution?</p>
+        <a href="scenario-03-lv-main-distribution-1.html" class="btn-cta">Begin Scenarios &rarr;</a>
+      </div>
+      <p class="prose" style="margin-top:20px;font-size:13.5px;color:#6B6B6B;">You can also go deeper into the
+      system reference &mdash; <a href="module-03-lv-main-distribution-overview.html">system overview, sources, failure modes and
+      restoration</a> &mdash; before starting the scenarios.</p>
+      <div class="pager">
+        <a href="modules.html">&larr; All Modules</a>
+        <a href="modules.html" class="to-index">Scenario Training</a>
+        <a href="scenario-03-lv-main-distribution-1.html">Scenarios &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Data Centre AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="powertec-training.html">Powertec Training</a></li>
+          <li><a href="skills-gap-analysis.html">Skills Gap Analysis</a></li>
+          <li><a href="platform.html">The Platform</a></li>
+          <li><a href="classroom.html">Classroom Learning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="field-evidence.html">Field Evidence Record</a></li>
+          <li><a href="drawing-library.html">Drawing Library</a></li>
+          <li><a href="platform.html">Training Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
