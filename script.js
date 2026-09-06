@@ -2,11 +2,32 @@
 // Handles mobile nav toggle + simple localStorage-based progress tracking.
 
 document.addEventListener('DOMContentLoaded', function () {
-  var toggle = document.querySelector('.mobile-toggle');
-  var nav = document.querySelector('nav.main-nav');
-  if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      nav.classList.toggle('open');
+  // Hamburger nav panel (site-wide), with click-outside-to-close scrim.
+  var btns = document.querySelectorAll('.hamburger');
+  var panel = document.getElementById('navPanel');
+  if (panel && btns.length) {
+    var scrim = document.createElement('div');
+    scrim.className = 'nav-scrim';
+    document.body.appendChild(scrim);
+
+    function closeNav() {
+      panel.classList.remove('open');
+      scrim.classList.remove('open');
+      btns.forEach(function (b) { b.setAttribute('aria-expanded', 'false'); });
+    }
+    function openNav() {
+      panel.classList.add('open');
+      scrim.classList.add('open');
+      btns.forEach(function (b) { b.setAttribute('aria-expanded', 'true'); });
+    }
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (panel.classList.contains('open')) closeNav(); else openNav();
+      });
+    });
+    scrim.addEventListener('click', closeNav);
+    panel.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', closeNav);
     });
   }
 
