@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answers &mdash; Section 13 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-13-source-transfers.html">Source Transfers and Couplings</a> &rsaquo; <a href="assessment-13-source-transfers.html">Assessment</a> &rsaquo; Answers</div>
+    <div class="eyebrow">Answers &middot; Section 13</div>
+    <h1>Source Transfers and Couplings</h1>
+    <p>Model answers and multiple-choice key.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice &mdash; Answer Key</h2>
+        <div style="margin-bottom:14px;"><p><strong>1. What is the approximate formula for the current that flows when paralleling two out-of- synchronisation sources?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; I = ΔU ÷ X (voltage difference divided by link impedance)</p></div><div style="margin-bottom:14px;"><p><strong>2. Why is paralleling two feeders from the SAME busbar generally safe without a synchro- check relay?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; They carry, at every instant, essentially the same voltage (ΔU ≈ 0), since they share a common origin</p></div><div style="margin-bottom:14px;"><p><strong>3. What does the synchro-check relay (ANSI 25) verify before permitting a breaker to close and parallel two sources?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; Matching voltage, frequency, and phase angle (and confirmed phase sequence) within a defined window</p></div><div style="margin-bottom:14px;"><p><strong>4. What is “reverse power” protection (ANSI 32) designed to detect?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; A generator’s prime mover losing power while still electrically connected, causing the generator to be driven as a motor by the other source</p></div><div style="margin-bottom:14px;"><p><strong>5. What is the fundamental danger of paralleling two non-synchronised sources?</strong><br>
+        Correct answer: <span class="status-pill done">A</span> &mdash; It is equivalent to creating a short-circuit between the two sources, with destructive currents proportional to their voltage difference</p></div>
+        <h2 style="margin-top:20px;">Long Answer &mdash; Model Points</h2>
+        <div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">1. Explain, using the ΔU ÷ X relationship, why a 180° phase difference between two sources being paralleled is equivalent to a short-circuit at twice the network voltage.</p><p>The current flowing between two paralleled sources is proportional to their instantaneous voltage difference (ΔU) divided by the link impedance (X). At a 180° phase difference, the two sinusoidal voltages are at their maximum opposition at every instant, making the effective voltage difference twice the peak voltage of a single source — electrically indistinguishable from connecting a source directly across a short-circuit at double its own nominal voltage, producing enormous, destructive currents.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">2. Describe the four synchronisation conditions the guide lists, and explain which one is structural (cannot be corrected in the field) versus which are dynamically monitored during the paralleling operation.</p><p>Same phase sequence (rotation) is structural: it is fixed by how the source is wired internally and verified at construction or after any cabling change — it cannot be corrected “in the moment” during a paralleling operation, only prevented by careful commissioning discipline. Same voltage, same frequency, and near-zero phase angle are all dynamic conditions that vary continuously and must be actively monitored (via AVR settings, governor control, and the synchro-check relay/auto-synchroniser) at the actual instant of closing.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">3. Explain the difference between closed transition (make-before-break) and open transition (break-before-make) transfers, and describe the specific additional risk that closed transition introduces which open transition avoids.</p><p>Closed transition briefly parallels the two sources (typically for no more than ~100 ms) under synchro-check control before fully transferring, avoiding any interruption to the load — but this introduces the paralleling risk itself: if synchronisation is not genuinely present or the parallel duration extends beyond the studied limit, the brief parallel period becomes a real hazard. Open transition instead fully opens the first source before closing the second, guaranteeing the two sources are never connected together at all, avoiding the paralleling risk entirely — at the cost of a guaranteed (if brief) break in supply to the load.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">4. Why does a “studied prolonged parallel” with the public utility grid require a grid operator agreement, reverse power protection, and validated combined short-circuit current, according to the guide?</p><p>A prolonged parallel with the public grid means the site’s generator(s) and the utility are electrically connected for an extended period, which requires validating that the combined short-circuit contribution of both sources does not exceed the installed switchgear’s breaking capacity (Icu), that a protection plan including reverse power (protecting the generator’s prime mover) and decoupling (protecting the utility’s network integrity and personnel safety during any utility-side fault) is in place, and that the neutral-earthing arrangement across both sources is correctly resolved — none of which a site can unilaterally decide, since it directly affects the utility’s own network and legal/contractual obligations.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">5. Using the real case of an STS closed-transition bypass, explain why the MOP must always have the operator verify synchronisation before authorising the manoeuvre, even though interlocks and a synchro-check relay are already in place.</p><p>Even with interlocks and a synchro-check relay physically preventing an out-of- synchronisation closure, the MOP still requires the operator to independently verify synchronisation (via measurement or “sources in sync” indicator lamps) because relying solely on automated protection removes the human cross-check that catches a genuinely failed or miscalibrated relay, a wiring error, or a situation the automated logic wasn’t designed to detect — the guide’s broader philosophy (echoed in the red list, section 21) is that no single indicator, however automated, is treated as sufficient proof on its own for a high-consequence action.</p></div>
+      </div>
+      <div class="pager">
+        <a href="assessment-13-source-transfers.html">&larr; Back to Assessment</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-14-power-quality.html">Power Quality — Harmonics and Other Common Problems &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

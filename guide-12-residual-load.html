@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 12 &mdash; Calculating the Residual Load — Method and Worked Examples | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; Calculating the Residual Load — Method and Worked Examples</div>
+    <div class="eyebrow">Section 12</div>
+    <h1>Calculating the Residual Load — Method and Worked Examples</h1>
+    <p></p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose"><p>This section is, as the guide itself states, “the specialist’s calculation no. 1” — the single most consequential piece of arithmetic performed before any maintenance operation in a redundant data centre, and it is functionally the practical, quantitative expression of the “concurrent maintainability” concept underpinning Uptime Institute Tier III/IV certification (see section 7’s expanded context).</p><p>Additional context:</p><p>Why “worst plausible” values matter more than typical values. The guide’s warning box about load-calculation traps (kW vs kVA, night-trough measurement vs peak-time work, battery recharge current, planned deployment growth) reflects a broader engineering safety principle sometimes called “the tyranny of the worst case”: redundant systems fail not during average conditions but at the coincidence of several adverse factors simultaneously — a maintenance window that happens to fall during a</p><p>cooling peak, immediately after a generator test that left batteries recharging, during a period of planned but not-yet-live IT growth. Calculating against a “typical Tuesday” measurement, rather than the worst plausible combination of these factors, is a well- documented root cause of real data centre overload incidents.</p><p>Power factor as a load-calculation trap. The guide’s insistence on distinguishing kW from kVA when calculating residual load reflects the same power-factor issue introduced in section 1: because UPS and cable ratings are fundamentally kVA-based (thermal/current limits) while IT load is often discussed in kW, a specialist who informally works only in kW risks understating the true current-based stress on surviving equipment, particularly if the UPS’s own rated power factor (commonly 0.9) is different from the actual measured load power factor.</p><p>Distributed redundancy and “N+1”-style thinking applied at block level. The guide’s example D (3N/2 distributed redundancy) illustrates a design pattern increasingly common in large-scale, modular data centre builds, where “blocks” of power/cooling capacity (sometimes matching a physical pod or hall) are sized collectively rather than each having its own dedicated 1:1 backup — a lower-capital-cost way of achieving most of 2N’s resilience, at the cost of needing a precisely maintained, non-uniform load- transfer scheme (exactly the caution flagged in the guide’s closing note to example D).</p></div>
+      <div class="card" style="margin-top:30px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to test your understanding of Section 12?</p>
+        <a href="assessment-12-residual-load.html" class="btn-cta">Take the Assessment &rarr;</a>
+      </div>
+      <div class="pager">
+        <a href="guide-11-ups-architecture.html">&larr; The UPS — Architecture, Sources, Synchronisation and Load</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-13-source-transfers.html">Source Transfers and Couplings &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

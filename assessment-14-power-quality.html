@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assessment &mdash; Section 14 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-14-power-quality.html">Power Quality — Harmonics and Other Common Problems</a> &rsaquo; Assessment</div>
+    <div class="eyebrow">Assessment &middot; Section 14</div>
+    <h1>Power Quality — Harmonics and Other Common Problems</h1>
+    <p>Work through the multiple-choice and long-answer questions, then check your answers.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice</h2>
+        <div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">1. What are THDi and THDu?</p><div class="check-row"><input type="radio" name="q0" style="accent-color:#F58220;width:16px;height:16px;"><label>A) Thermal Design Headroom (current) and Thermal Design Headroom (utility), respectively</label></div><div class="check-row"><input type="radio" name="q0" style="accent-color:#F58220;width:16px;height:16px;"><label>B) Total harmonic distortion of current and of voltage, respectively</label></div><div class="check-row"><input type="radio" name="q0" style="accent-color:#F58220;width:16px;height:16px;"><label>C) Two grades of HRC fuse</label></div><div class="check-row"><input type="radio" name="q0" style="accent-color:#F58220;width:16px;height:16px;"><label>D) Two different types of transformer windings</label></div></div><div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">2. Why do triplen harmonics (3rd, 9th, 15th…) add up in the neutral conductor instead of cancelling?</p><div class="check-row"><input type="radio" name="q1" style="accent-color:#F58220;width:16px;height:16px;"><label>A) The neutral conductor amplifies them electronically</label></div><div class="check-row"><input type="radio" name="q1" style="accent-color:#F58220;width:16px;height:16px;"><label>B) They are in phase across all three phases (rather than 120° apart), so they sum arithmetically rather than cancelling</label></div><div class="check-row"><input type="radio" name="q1" style="accent-color:#F58220;width:16px;height:16px;"><label>C) They only exist on single-phase circuits</label></div><div class="check-row"><input type="radio" name="q1" style="accent-color:#F58220;width:16px;height:16px;"><label>D) They are cancelled by the PE conductor instead</label></div></div><div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">3. According to IEEE 519, why are voltage THD limits generally stricter (lower) at higher system voltages?</p><div class="check-row"><input type="radio" name="q2" style="accent-color:#F58220;width:16px;height:16px;"><label>A) Higher voltage always produces inherently more distortion</label></div><div class="check-row"><input type="radio" name="q2" style="accent-color:#F58220;width:16px;height:16px;"><label>B) Current harmonics cannot propagate above 1 kV</label></div><div class="check-row"><input type="radio" name="q2" style="accent-color:#F58220;width:16px;height:16px;"><label>C) It is an arbitrary historical convention with no technical basis</label></div><div class="check-row"><input type="radio" name="q2" style="accent-color:#F58220;width:16px;height:16px;"><label>D) Higher-voltage systems typically serve many more downstream customers, so conservative limits protect the largest population, even though the systems are electrically “stiffer”</label></div></div><div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">4. Why does an average-responding (non-TRMS) clamp meter give an unreliable reading on a harmonic-rich data centre circuit?</p><div class="check-row"><input type="radio" name="q3" style="accent-color:#F58220;width:16px;height:16px;"><label>A) It always overestimates current by exactly double</label></div><div class="check-row"><input type="radio" name="q3" style="accent-color:#F58220;width:16px;height:16px;"><label>B) It can underestimate the true current by up to 40%, since it does not correctly account for the non-sinusoidal waveform</label></div><div class="check-row"><input type="radio" name="q3" style="accent-color:#F58220;width:16px;height:16px;"><label>C) It cannot be used on three-phase circuits at all</label></div><div class="check-row"><input type="radio" name="q3" style="accent-color:#F58220;width:16px;height:16px;"><label>D) It only works below 50 Hz</label></div></div><div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">5. What is the recommended remedy for resonance risk when installing a tuned passive harmonic filter or PFC capacitor bank?</p><div class="check-row"><input type="radio" name="q4" style="accent-color:#F58220;width:16px;height:16px;"><label>A) A mandatory resonance study before installation, since a poorly tuned filter can amplify rather than reduce distortion</label></div><div class="check-row"><input type="radio" name="q4" style="accent-color:#F58220;width:16px;height:16px;"><label>B) Installing the filter only on the neutral conductor</label></div><div class="check-row"><input type="radio" name="q4" style="accent-color:#F58220;width:16px;height:16px;"><label>C) No study is needed if the filter is purchased from a reputable manufacturer</label></div><div class="check-row"><input type="radio" name="q4" style="accent-color:#F58220;width:16px;height:16px;"><label>D) Simply oversizing the capacitor bank by 50%</label></div></div>
+        <h2 style="margin-top:10px;">Long Answer</h2>
+        <div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">1. Explain the mechanism by which non-linear loads (UPS rectifiers, VFDs, switch-mode power supplies) generate harmonic currents, and how those currents become voltage harmonics that affect other, unrelated loads.</p><textarea rows="4" data-track-field="guide-14-longq-0" placeholder="Write your answer..."></textarea></div><div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">2. Explain why a generator supply produces a much higher THDu for the same harmonic- rich load compared to a utility supply, and what practical risks this creates.</p><textarea rows="4" data-track-field="guide-14-longq-1" placeholder="Write your answer..."></textarea></div><div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">3. Describe the IEEE 519 philosophy of “shared responsibility” between utility and end-user for harmonic control, and explain how the current-distortion limit scaling by Isc/IL ratio supports this philosophy.</p><textarea rows="4" data-track-field="guide-14-longq-2" placeholder="Write your answer..."></textarea></div><div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">4. Explain at least three of the “other classic problems” listed in the guide’s section 14.4 table (e.g., voltage sags, phase unbalance, circulating currents in the PE), including their typical cause and remedy.</p><textarea rows="4" data-track-field="guide-14-longq-3" placeholder="Write your answer..."></textarea></div><div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">5. Why does the guide warn that “a power quality measurement made on a quiet Tuesday says nothing about behaviour at the worst moment”? Describe what a proper measurement campaign should cover instead.</p><textarea rows="4" data-track-field="guide-14-longq-4" placeholder="Write your answer..."></textarea></div>
+      </div>
+      <div class="card" style="margin-top:20px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Finished? Check your answers.</p>
+        <a href="answers-14-power-quality.html" class="btn-cta">View Answers &rarr;</a>
+      </div>
+      <div class="pager">
+        <a href="guide-14-power-quality.html">&larr; Back to Section 14</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <span></span>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

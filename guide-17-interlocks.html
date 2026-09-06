@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 17 &mdash; Interlocks — Read a Diagram and Never Be Caught Out by Them | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; Interlocks — Read a Diagram and Never Be Caught Out by Them</div>
+    <div class="eyebrow">Section 17</div>
+    <h1>Interlocks — Read a Diagram and Never Be Caught Out by Them</h1>
+    <p></p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose"><p>Interlock philosophy — using physical or logical impossibility, rather than a rule someone might forget, to prevent a specific dangerous sequence — reflects a core principle of safety engineering sometimes called “inherently safe design” or “positive interlocking,” a concept found across many high-hazard industries (rail signalling, nuclear plant control, process safety), not just electrical switchgear.</p><p>Additional context:</p><p>Trapped-key systems as “physical proof.” The three named manufacturer systems (Castell, Ronis, Kirk) referenced by the guide represent the dominant commercial trapped-key interlock technologies used in industrial and utility switchgear worldwide. Their shared underlying principle — that possessing a physical key is itself unforgeable proof of an upstream device’s safe state — is deliberately more robust than any purely administrative or procedural control, because it doesn’t depend on anyone remembering to check a position or follow a step; the physical mechanism makes the wrong sequence literally impossible to execute, not just against the rules.</p><p>Interlock defeat as an exceptional, tightly controlled event. The guide’s rule that any interlock defeat requires written authorisation, a dedicated risk analysis, compensating measures, and a traced restoration reflects standard industrial safety practice for any temporary bypass of a safety interlock (closely analogous to “impairment” procedures used for fire protection system bypasses, or “management of change” processes in process safety) — the core idea being that removing a safety barrier, even briefly and for legitimate reasons, must be treated with at least as much rigor as the hazard the interlock itself protects against.</p><p>Zone Selective Interlocking (ZSI) as a logic-family interlock. ZSI, mentioned by the guide as a wired-logic alternative to pure time-based selectivity, allows a downstream breaker that detects a fault to signal upstream breakers to “wait” (i.e., not trip instantaneously), since the downstream device is already handling the fault — this reduces the overall fault-clearing time and arc flash energy at the upstream breaker compared to a purely time-graded selectivity scheme, where the upstream device must wait a fixed, conservative delay regardless of whether a downstream device actually responds.</p></div>
+      <div class="card" style="margin-top:30px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to test your understanding of Section 17?</p>
+        <a href="assessment-17-interlocks.html" class="btn-cta">Take the Assessment &rarr;</a>
+      </div>
+      <div class="pager">
+        <a href="guide-16-ppe-instruments.html">&larr; Personal Protective Equipment and Instruments</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-18-isolation.html">Isolation — From the Order of Operations to the Hand-Over &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answers &mdash; Section 14 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-14-power-quality.html">Power Quality — Harmonics and Other Common Problems</a> &rsaquo; <a href="assessment-14-power-quality.html">Assessment</a> &rsaquo; Answers</div>
+    <div class="eyebrow">Answers &middot; Section 14</div>
+    <h1>Power Quality — Harmonics and Other Common Problems</h1>
+    <p>Model answers and multiple-choice key.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice &mdash; Answer Key</h2>
+        <div style="margin-bottom:14px;"><p><strong>1. What are THDi and THDu?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; Total harmonic distortion of current and of voltage, respectively</p></div><div style="margin-bottom:14px;"><p><strong>2. Why do triplen harmonics (3rd, 9th, 15th…) add up in the neutral conductor instead of cancelling?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; They are in phase across all three phases (rather than 120° apart), so they sum arithmetically rather than cancelling</p></div><div style="margin-bottom:14px;"><p><strong>3. According to IEEE 519, why are voltage THD limits generally stricter (lower) at higher system voltages?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; Higher-voltage systems typically serve many more downstream customers, so conservative limits protect the largest population, even though the systems are electrically “stiffer”</p></div><div style="margin-bottom:14px;"><p><strong>4. Why does an average-responding (non-TRMS) clamp meter give an unreliable reading on a harmonic-rich data centre circuit?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; It can underestimate the true current by up to 40%, since it does not correctly account for the non-sinusoidal waveform</p></div><div style="margin-bottom:14px;"><p><strong>5. What is the recommended remedy for resonance risk when installing a tuned passive harmonic filter or PFC capacitor bank?</strong><br>
+        Correct answer: <span class="status-pill done">A</span> &mdash; A mandatory resonance study before installation, since a poorly tuned filter can amplify rather than reduce distortion</p></div>
+        <h2 style="margin-top:20px;">Long Answer &mdash; Model Points</h2>
+        <div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">1. Explain the mechanism by which non-linear loads (UPS rectifiers, VFDs, switch-mode power supplies) generate harmonic currents, and how those currents become voltage harmonics that affect other, unrelated loads.</p><p>Non-linear loads (rectifiers, switch-mode supplies, VFDs) draw current in short pulses rather than a smooth sine wave; Fourier analysis shows this pulsed waveform decomposes into the fundamental frequency plus a series of harmonic components at integer multiples of it. These harmonic currents then flow through the finite impedance of the supply network (cables, transformers, generator windings); by Ohm’s Law, that impedance converts the harmonic current into a corresponding harmonic voltage drop superimposed on the bus voltage — since every load on that bus shares the same voltage, one polluting load’s current distortion becomes voltage distortion visible to every other connected load, including otherwise “clean” linear loads.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">2. Explain why a generator supply produces a much higher THDu for the same harmonic- rich load compared to a utility supply, and what practical risks this creates.</p><p>A generator’s internal source impedance is significantly higher than the utility grid’s (a much “weaker” source in electrical terms). Since voltage distortion equals harmonic current multiplied by source impedance, the same harmonic current from IT loads produces a much larger voltage distortion on generator supply than on utility supply. This creates real practical risk: the generator’s AVR (automatic voltage regulator) can become unstable trying to regulate a badly distorted waveform, and sensitive downstream electronic loads can misbehave — a critical consideration during generator testing and transfer operations.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">3. Describe the IEEE 519 philosophy of “shared responsibility” between utility and end-user for harmonic control, and explain how the current-distortion limit scaling by Isc/IL ratio supports this philosophy.</p><p>IEEE 519 assigns current-distortion responsibility to the end-user (limiting the harmonics they inject) and voltage-distortion responsibility to the utility (keeping source impedance low enough that reasonable customer distortion doesn’t cause excessive voltage distortion for the wider network). The current limit scaling by Isc/IL ratio reflects this directly: a “weak” system (low ratio, meaning the customer’s load is large relative to available fault current) gets a stricter current-distortion limit, since the same absolute harmonic current would produce more voltage distortion on a weak system than a strong one — so the standard effectively asks larger, more influential customers to be cleaner.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">4. Explain at least three of the “other classic problems” listed in the guide’s section 14.4 table (e.g., voltage sags, phase unbalance, circulating currents in the PE), including their typical cause and remedy.</p><p>Voltage sags/short interruptions: caused by upstream network faults, lightning, or MV switching; detected via power quality recorders and UPS event logs; the remedy is simply the UPS’s core mission (riding through the disturbance), so ensuring adequate battery autonomy and correct transfer thresholds is the practical response. Phase unbalance: caused by single-phase loads poorly distributed across phases (e.g., PDUs filled “in sequence” rather than balanced); detected by comparing current per phase at the PDU/MSB; remedy is rebalancing at each customer deployment, keeping the difference under roughly 10–15%. Circulating currents in the PE: caused by a double neutral-earth link (e.g., residual TN-C wiring or a poorly designed source transfer); detected with a clamp meter on the PE (which should read near zero without a fault); remedy is removing the extra link and correctly handling the neutral during transfers (4- pole switching where needed).</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">5. Why does the guide warn that “a power quality measurement made on a quiet Tuesday says nothing about behaviour at the worst moment”? Describe what a proper measurement campaign should cover instead.</p><p>A single measurement snapshot only reflects the load and network conditions present at that specific moment — a quiet period gives no information about behaviour during genuinely stressful conditions: transfer to generator (much higher THDu due to weaker source impedance), return to utility, battery recharge current adding to the load, or a cooling-system peak during a heatwave. A proper measurement campaign must specifically cover these events — either by monitoring continuously across a period long enough to naturally capture them (the guide suggests at least a week with a Class A analyser), or by deliberately provoking them in a controlled test, so the resulting THD/TDD figures genuinely represent worst-case conditions rather than a comfortable average.</p></div>
+      </div>
+      <div class="pager">
+        <a href="assessment-14-power-quality.html">&larr; Back to Assessment</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-15-regulatory-framework.html">The Regulatory Framework and Electrical Qualifications &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

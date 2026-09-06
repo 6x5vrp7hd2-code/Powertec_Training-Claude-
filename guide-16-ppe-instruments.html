@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 16 &mdash; Personal Protective Equipment and Instruments | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; Personal Protective Equipment and Instruments</div>
+    <div class="eyebrow">Section 16</div>
+    <h1>Personal Protective Equipment and Instruments</h1>
+    <p></p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose"><p>The PPE and instrument categories described (insulating gloves, arc-rated clothing, voltage detectors, measurement categories) are governed by a dense but internationally consistent set of standards, and recent (2024) updates to the arc-flash side of this framework are directly relevant to how the guide’s tables should be applied today.</p><p>Additional context:</p><p>NFPA 70E 2024 arc-flash PPE category structure. The four PPE categories, defined by minimum arc rating in cal/cm², are broadly: Category 1 (minimum ~4 cal/cm², e.g. arc- rated shirt and pants for lower-hazard panel operations), Category 2 (minimum ~8 cal/cm², arc-rated coveralls plus face shield for tasks like MCC work), Category 3 (minimum ~25 cal/cm², a full arc flash suit and hood, e.g. for switchgear racking), and Category 4 (minimum ~40 cal/cm², maximum protection with a heavy arc suit). Crucially, the arc rating of the selected PPE must always be equal to or greater than the calculated (or table-derived) incident energy for the specific task and equipment — never simply “whatever category matches the voltage class,” since incident energy depends heavily on fault current and clearing time, not voltage alone.</p><p>The arc flash boundary concept. This is the calculated approach distance from a potential arc source at which incident energy reaches 1.2 cal/cm² — a widely used threshold associated with the onset of a second-degree burn on exposed skin. It is explicitly not a “safe line” in the way a shock-protection boundary might suggest; it is a threshold at which PPE and other controls become mandatory for anyone crossing inside it while equipment is energised and work is being performed, and simply standing further back during a switching operation genuinely reduces risk (incident energy falls</p><p>off sharply with distance).</p><p>Measurement category (CAT) ratings and their real purpose. The CAT II/III/IV classification the guide references relates specifically to the transient overvoltage an instrument is designed to withstand at different points in a power system — not simply “how tough” a meter is generally. CAT II covers receptacle-level/plug-connected equipment; CAT III covers fixed distribution equipment such as panels and MSBs; CAT IV covers the origin of the installation (utility service entrance, metering, outdoor conductors) where the highest transient energy from the utility side can appear. Using a lower-CAT-rated instrument at a higher-CAT point (e.g., a CAT II multimeter inside an MSB) risks the instrument failing violently — exploding, effectively — if a transient surge occurs during the measurement, which is precisely the guide’s warning.</p></div>
+      <div class="card" style="margin-top:30px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to test your understanding of Section 16?</p>
+        <a href="assessment-16-ppe-instruments.html" class="btn-cta">Take the Assessment &rarr;</a>
+      </div>
+      <div class="pager">
+        <a href="guide-15-regulatory-framework.html">&larr; The Regulatory Framework and Electrical Qualifications</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-17-interlocks.html">Interlocks — Read a Diagram and Never Be Caught Out by Them &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

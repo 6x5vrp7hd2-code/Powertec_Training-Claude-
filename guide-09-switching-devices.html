@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 09 &mdash; Switching Devices and Their Performance | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; Switching Devices and Their Performance</div>
+    <div class="eyebrow">Section 09</div>
+    <h1>Switching Devices and Their Performance</h1>
+    <p></p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose"><p>The distinction between disconnector, switch-disconnector, circuit breaker, HRC fuse and earthing switch is codified internationally: IEC 60947 (low-voltage switchgear and controlgear) and IEC 62271 (high-voltage switchgear) both define these device categories by their precise interrupting and isolating capabilities, which is exactly the “what it can do / what it cannot do” table the guide provides.</p><p>Additional context:</p><p>Breaking capacity standards (Icu, Ics, Icw, Icm). These four values are all formally defined in IEC 60947-2 for low-voltage circuit breakers. Icu (ultimate breaking capacity) is verified with an O-CO test sequence and does not guarantee the device remains serviceable afterward — it is a “survival,” not a “comfort,” rating, exactly as the guide states. Ics (service breaking capacity), expressed as a percentage of Icu (commonly 25/50/75/100%), is verified with the more demanding O-CO-CO sequence and does guarantee continued service, which is why specifying equipment with Ics = 100% of Icu (rather than a lower percentage) is often a deliberate design choice for critical data centre distribution, ensuring the breaker remains usable after clearing its rated maximum fault.</p><p>HRC fuse classes and international naming. The gG/aM/gR-aR classification the guide describes is the IEC 60269 fuse-link classification system: “g” fuses provide general- purpose protection against both overload and short-circuit, while “a” (partial-range) fuses protect only against short-circuit and must always be paired with another overload-protective device (commonly used for motor and transformer back-up protection). The “gR/aR” ultra-fast semiconductor-protection classes are specifically designed for the very fast let-through energy limits needed to protect power-electronics devices like UPS rectifiers, inverters and static transfer switches — components that can be destroyed by fault energy an ordinary fuse would let through before clearing.</p><p>Draw-out breaker positions and arc flash statistics. Racking operations (moving a breaker between connected, test, and disconnected positions) are consistently identified in industry incident data as one of the higher-risk switching operations for arc flash events, precisely because the breaker’s main and auxiliary circuits are being mechanically engaged or disengaged while — if the “never rack a closed breaker” rule is violated — potentially still carrying load or fault current; this is the direct justification for remote/motorised racking mechanisms in modern switchgear designs, letting the operator stand outside the arc flash boundary during the operation.</p></div>
+      <div class="card" style="margin-top:30px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to test your understanding of Section 09?</p>
+        <a href="assessment-09-switching-devices.html" class="btn-cta">Take the Assessment &rarr;</a>
+      </div>
+      <div class="pager">
+        <a href="guide-08-reading-sld.html">&larr; Reading a Single Line Diagram</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-10-mv-substation.html">The MV Substation and Its Switchgear &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

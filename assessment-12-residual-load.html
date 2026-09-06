@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assessment &mdash; Section 12 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-12-residual-load.html">Calculating the Residual Load — Method and Worked Examples</a> &rsaquo; Assessment</div>
+    <div class="eyebrow">Assessment &middot; Section 12</div>
+    <h1>Calculating the Residual Load — Method and Worked Examples</h1>
+    <p>Work through the multiple-choice and long-answer questions, then check your answers.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice</h2>
+        <div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">1. What is the four-step method for calculating residual load, in order?</p><div class="check-row"><input type="radio" name="q0" style="accent-color:#F58220;width:16px;height:16px;"><label>A) Measure the real load at the worst expected moment; count surviving equipment; project the redistributed load; compare against the site threshold</label></div><div class="check-row"><input type="radio" name="q0" style="accent-color:#F58220;width:16px;height:16px;"><label>B) Calculate the theoretical maximum load; ignore actual measurements; apply a standard 50% margin</label></div><div class="check-row"><input type="radio" name="q0" style="accent-color:#F58220;width:16px;height:16px;"><label>C) Ask the customer for their expected load; apply it directly with no further checks</label></div><div class="check-row"><input type="radio" name="q0" style="accent-color:#F58220;width:16px;height:16px;"><label>D) Estimate the load from memory; isolate the equipment; measure afterward; report any problems</label></div></div><div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">2. In Example B (N+1 already consumed), why is the operation forbidden?</p><div class="check-row"><input type="radio" name="q1" style="accent-color:#F58220;width:16px;height:16px;"><label>A) Because the load was measured on the wrong day of the week</label></div><div class="check-row"><input type="radio" name="q1" style="accent-color:#F58220;width:16px;height:16px;"><label>B) Because N+1 sites can never have any equipment isolated under any circumstances</label></div><div class="check-row"><input type="radio" name="q1" style="accent-color:#F58220;width:16px;height:16px;"><label>C) With UPS 4 already faulted, only two modules would survive isolating UPS 2, pushing each to 103% of rated capacity — a certain overload</label></div><div class="check-row"><input type="radio" name="q1" style="accent-color:#F58220;width:16px;height:16px;"><label>D) Because UPS 4’s fault is unrelated to UPS 2’s isolation</label></div></div><div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">3. Why does the guide specifically warn against calculating residual load using a “quiet Tuesday” or night-trough measurement?</p><div class="check-row"><input type="radio" name="q2" style="accent-color:#F58220;width:16px;height:16px;"><label>A) Because Tuesdays have unusually high statistical variance</label></div><div class="check-row"><input type="radio" name="q2" style="accent-color:#F58220;width:16px;height:16px;"><label>B) Because measurements taken at night are technically inaccurate</label></div><div class="check-row"><input type="radio" name="q2" style="accent-color:#F58220;width:16px;height:16px;"><label>C) Because the real risk moment is the worst plausible combination of factors (peak IT load, battery recharge, cooling peak), not an average or low-demand period</label></div><div class="check-row"><input type="radio" name="q2" style="accent-color:#F58220;width:16px;height:16px;"><label>D) Because BMS/EPMS systems only log data on weekdays</label></div></div><div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">4. In a 2N topology, what must be verified BEFORE isolating one complete path, in addition to the load percentage calculation?</p><div class="check-row"><input type="radio" name="q3" style="accent-color:#F58220;width:16px;height:16px;"><label>A) That all customers have signed a new service contract</label></div><div class="check-row"><input type="radio" name="q3" style="accent-color:#F58220;width:16px;height:16px;"><label>B) That the transfer actually works: STS in auto mode, servers genuinely dual-corded across both paths, no orphan single-corded load on the path being isolated</label></div><div class="check-row"><input type="radio" name="q3" style="accent-color:#F58220;width:16px;height:16px;"><label>C) That the isolated path’s transformer has been replaced within the last year</label></div><div class="check-row"><input type="radio" name="q3" style="accent-color:#F58220;width:16px;height:16px;"><label>D) That the generator has a full fuel tank</label></div></div><div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">5. Why does kW vs kVA (power factor) matter as a “trap” in residual load calculations?</p><div class="check-row"><input type="radio" name="q4" style="accent-color:#F58220;width:16px;height:16px;"><label>A) UPS and cable ratings are fundamentally current/kVA-based, so working only in kW can understate the true thermal stress on surviving equipment</label></div><div class="check-row"><input type="radio" name="q4" style="accent-color:#F58220;width:16px;height:16px;"><label>B) kW and kVA are always numerically identical in a data centre</label></div><div class="check-row"><input type="radio" name="q4" style="accent-color:#F58220;width:16px;height:16px;"><label>C) Power factor has no bearing on residual load calculations</label></div><div class="check-row"><input type="radio" name="q4" style="accent-color:#F58220;width:16px;height:16px;"><label>D) kVA only applies to DC circuits</label></div></div>
+        <h2 style="margin-top:10px;">Long Answer</h2>
+        <div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">1. Walk through Example A (N+1 nominal case) step by step, showing how the 69% figure is derived and why it is compared against an 85% threshold.</p><textarea rows="4" data-track-field="guide-12-longq-0" placeholder="Write your answer..."></textarea></div><div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">2. Explain why Example B (N+1 already consumed) is forbidden, and describe what would need to happen (repair or waiver) before the operation could proceed.</p><textarea rows="4" data-track-field="guide-12-longq-1" placeholder="Write your answer..."></textarea></div><div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">3. In Example C (2N), explain why simply calculating “80% ≤ 90% threshold, therefore authorised” is not sufficient on its own, and what additional verification is required.</p><textarea rows="4" data-track-field="guide-12-longq-2" placeholder="Write your answer..."></textarea></div><div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">4. Describe the specific risk illustrated in Example D (distributed redundancy) when the load transfer scheme is non-uniform (e.g., 60% of an isolated block’s load routes to one specific surviving block rather than splitting evenly).</p><textarea rows="4" data-track-field="guide-12-longq-3" placeholder="Write your answer..."></textarea></div><div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">5. List and explain at least four of the “traps of load calculation” the guide warns about, and explain why each could cause a specialist to underestimate real risk.</p><textarea rows="4" data-track-field="guide-12-longq-4" placeholder="Write your answer..."></textarea></div>
+      </div>
+      <div class="card" style="margin-top:20px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Finished? Check your answers.</p>
+        <a href="answers-12-residual-load.html" class="btn-cta">View Answers &rarr;</a>
+      </div>
+      <div class="pager">
+        <a href="guide-12-residual-load.html">&larr; Back to Section 12</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <span></span>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 11 &mdash; The UPS — Architecture, Sources, Synchronisation and Load | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; The UPS — Architecture, Sources, Synchronisation and Load</div>
+    <div class="eyebrow">Section 11</div>
+    <h1>The UPS — Architecture, Sources, Synchronisation and Load</h1>
+    <p></p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose"><p>The double-conversion UPS architecture described (VFI class per IEC 62040-3) remains the dominant topology specified for critical data centre loads worldwide, precisely because it fully decouples the protected load from all upstream disturbances — the inverter, not the utility, manufactures the waveform the load actually sees.</p><p>Additional context:</p><p>IEC 62040-3 UPS classification. The international standard defines three UPS performance classes by a three-letter code (commonly summarised as VFD, VI, VFI): VFD (Voltage and Frequency Dependent) — the simplest “offline”/standby topology, where the load runs directly off the raw mains most of the time and only switches to the inverter on a disturbance; VI (Voltage Independent) — a “line-interactive” topology that regulates voltage but still passes mains frequency through; and VFI (Voltage and Frequency Independent) — the double-conversion topology the guide describes, where the inverter continuously manufactures the output regardless of upstream voltage or frequency variation. VFI/double-conversion is the class specified for essentially all serious data centre critical loads, since it is the only class providing genuine, continuous decoupling from the utility.</p><p>Static bypass switch (SSW) speed and thyristor technology. Thyristor-based static switches can transfer load between sources in a few milliseconds specifically because thyristors are solid-state semiconductor devices with no moving parts — unlike a mechanical contactor, which needs physical contact travel time, a thyristor can be commanded to conduct or block current almost instantaneously (limited mainly by the AC waveform’s zero-crossing points), which is why the SSW — not the mechanical maintenance bypass — is the device relied upon for automatic, load-preserving transfers on an inverter fault.</p><p>UPS parallel systems and load-sharing control. Modern parallel UPS systems use a dedicated parallel communication bus between modules (often a redundant, ring-based digital link) specifically so that a failure of the communication link itself doesn’t cause a loss of synchronisation between modules — a design lesson learned from earlier- generation parallel UPS systems where a single point of failure in the inter-module link could cause “hunting” (modules fighting each other for load share) or a complete loss of parallel operation.</p></div>
+      <div class="card" style="margin-top:30px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to test your understanding of Section 11?</p>
+        <a href="assessment-11-ups-architecture.html" class="btn-cta">Take the Assessment &rarr;</a>
+      </div>
+      <div class="pager">
+        <a href="guide-10-mv-substation.html">&larr; The MV Substation and Its Switchgear</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-12-residual-load.html">Calculating the Residual Load — Method and Worked Examples &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

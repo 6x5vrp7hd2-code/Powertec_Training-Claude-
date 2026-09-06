@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answers &mdash; Section 19 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-19-the-mop.html">The MOP — Complete Drafting Methodology</a> &rsaquo; <a href="assessment-19-the-mop.html">Assessment</a> &rsaquo; Answers</div>
+    <div class="eyebrow">Answers &middot; Section 19</div>
+    <h1>The MOP — Complete Drafting Methodology</h1>
+    <p>Model answers and multiple-choice key.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice &mdash; Answer Key</h2>
+        <div style="margin-bottom:14px;"><p><strong>1. What is the key difference between a MOP, an SOP, and an EOP?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; MOP is for planned, non-recurring operations; SOP is for recurring standard operations; EOP is for emergency response</p></div><div style="margin-bottom:14px;"><p><strong>2. What is a “hold point” in a MOP?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; A mandatory stop, with cross-check, inserted before every consequential manoeuvre</p></div><div style="margin-bottom:14px;"><p><strong>3. Why must each MOP action line contain only one imperative verb (“Open QF12,” never “open QF12 and check the load then close QF14”)?</strong><br>
+        Correct answer: <span class="status-pill done">A</span> &mdash; So that each action has one single, clearly observable expected result, making deviations easy to detect and stop on</p></div><div style="margin-bottom:14px;"><p><strong>4. Why does the guide state “if the reviewer asks a question, the MOP is incomplete”?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; Because a genuinely independent reviewer catching an unstated assumption reveals a gap the original author, who already knows the context, could not see</p></div><div style="margin-bottom:14px;"><p><strong>5. What are the six stages of the methodology for building a MOP sequence “without getting lost,” as described by the guide?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; Collect documents, locate the equipment in the chain, let interlocks dictate order, validation walkdown, table-top/dry run, execute ticking off</p></div>
+        <h2 style="margin-top:20px;">Long Answer &mdash; Model Points</h2>
+        <div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">1. Explain the nine-part standard structure of a MOP as described by the guide, and describe why the “back-out plan” section is considered essential even for a well- planned operation.</p><p>The nine parts are: header/approvals, objective/scope, risk analysis/criticality, prerequisites, roles/communication, back-out plan, step-by-step sequence, return to service/final checks, and close-out. The back-out plan is essential because even a carefully planned operation can encounter an unexpected deviation partway through, and without a pre-defined, explicit path back to a safe state at each irreversible step, an operator facing an unexpected result mid-operation has no agreed, safe fallback — they would be improvising under pressure, exactly what the guide’s broader philosophy (section 20.2: “never tinker during a MOP”) warns against.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">2. Describe the six-stage methodology for building a MOP sequence, and explain why “let the interlocks dictate the order” is placed before “validation walkdown” rather than after.</p><p>The six stages are: collect (up-to-date diagrams, manuals, key register, prior lessons learned), locate (position the equipment in the chain, calculate residual load), let the interlocks dictate the order (build the sequence from what keys/locks are actually available and what they release, in order), validation walkdown (physically check every tag/lock/lamp in the field without operating anything), table-top/dry run (independent peer review playing through every line and “what if”), and execute ticking off (perform the operation, ticking each verified line). Interlocks are used to dictate the order before validation because the interlocks themselves define the only physically possible sequence — building the draft sequence around them from the start avoids drafting an unworkable sequence that the walkdown would then simply discover is impossible, wasting the walkdown’s value on catching a structural error rather than confirming genuine details.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">3. Explain why the guide insists on imperative, single-action lines with an observable expected result for every MOP step, using an example of what NOT to write versus what TO write.</p><p>Single-action, single-expected-result lines make deviations immediately and unambiguously detectable: if the line says “Open QF12: open position lamp lit, zero current on the ammeter” and the ammeter still shows current, the operator knows precisely and immediately that something is wrong and must stop. A combined line like “open QF12 and check the load then close QF14” conflates three actions and expected results into one step, making it unclear which specific sub-action failed if something doesn’t match, and inviting operators to skip ahead or interpret loosely under time pressure.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">4. Describe the purpose of a “table-top / dry run” review, and explain what kind of errors this step is specifically designed to catch that a solo read-through would not.</p><p>A table-top/dry run involves a peer who did NOT write the MOP reading through it and actively questioning every line and every “what if” scenario — a non-compliant result, a key that doesn’t release, an unexpected alarm. This step specifically catches unstated assumptions the original author made without realising it (since the author already understands the context and equipment intuitively), gaps in the back-out plan for scenarios the author didn’t consider, and ambiguous wording that seems clear to the writer but could be misread by someone else during actual execution — none of which a solo re-read by the same author is likely to surface, since the author’s own mental model fills in the gaps automatically.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">5. Explain why the guide states that “the stop rule” (any deviation between expected and observed result = STOP) belongs to every participant, not just the work leader, and describe the practical consequence of this principle during execution.</p><p>Making the stop rule belong to every participant — not just the designated work leader — means anyone on the team who observes a deviation from the expected result has both the authority and the explicit obligation to halt the operation immediately, rather than deferring to a hierarchy that might delay the stop or allow social pressure to suppress a valid concern. In practice, this means a junior technician confirming a switching action (“confirmed, QF12”) who notices the ammeter doesn’t match the expected zero reading is expected to say so and stop the operation on the spot, exactly as a work leader would, rather than assuming someone more senior will catch it.</p></div>
+      </div>
+      <div class="pager">
+        <a href="assessment-19-the-mop.html">&larr; Back to Assessment</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-20-before-during-after.html">Before / During / After — The Operator’s Checklists &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

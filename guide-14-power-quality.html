@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 14 &mdash; Power Quality — Harmonics and Other Common Problems | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; Power Quality — Harmonics and Other Common Problems</div>
+    <div class="eyebrow">Section 14</div>
+    <h1>Power Quality — Harmonics and Other Common Problems</h1>
+    <p></p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose"><p>Harmonic distortion in data centres is formally governed internationally by IEEE 519 (“IEEE Recommended Practice and Requirements for Harmonic Control in Electric Power Systems”), most recently updated in 2022, which establishes the specific voltage and current distortion limits the guide’s THDu/THDi thresholds are drawn from.</p><p>Additional context, sourced from the current (2022) edition of IEEE 519 and related industry references:</p><p>IEEE 519 philosophy of shared responsibility. The standard’s central principle is that both sides of the meter share responsibility for limiting waveform distortion: end-users are responsible for limiting the current distortion (harmonics) they inject, while utilities are responsible for keeping system source impedance low enough that reasonable customer current distortion doesn’t translate into excessive voltage distortion for everyone else on the same feeder. This is exactly the mechanism the guide describes: current harmonics flowing through network impedance create voltage harmonics that then pollute all connected loads.</p><p>Voltage distortion limits scale with voltage level. IEEE 519-2022 sets stricter voltage THD limits at higher voltage levels: for systems ≤1 kV, up to 8.0% THD is permitted; for 1 kV–69 kV, 5.0% THD (individual harmonic limit 3.0%); for 69 kV–161 kV, 2.5% THD (individual limit 1.5%); above 161 kV, 1.5% THD (individual limit 1.0%). The logic: higher- voltage systems are “stiffer” (lower source impedance relative to load), so the same current distortion produces less voltage distortion, but a single point on a high-voltage system also serves many more downstream customers — so a conservative, low limit protects the largest population of connected users.</p><p>Current distortion limits scale with system strength (Isc/IL ratio). Rather than a single fixed number, IEEE 519 scales the allowed current total demand distortion (TDD) by the ratio of the system’s short-circuit current (Isc) to the site’s maximum demand load current (IL) at the point of common coupling: weaker systems (low Isc/IL, meaning the load is large relative to the available fault current) get stricter limits (as low as 5% TDD), while stronger systems (high Isc/IL) permit more (up to 20% TDD) — reflecting that a “stiffer” system can tolerate more current distortion from a given customer before the resulting voltage distortion becomes a problem for others.</p><p>TRMS measurement is non-negotiable for harmonic-rich circuits. As referenced</p><p>elsewhere in the guide (section 11.7), an “average-responding” clamp meter (rather than a genuine True RMS instrument) can underestimate a harmonic-distorted current by up to 40% — meaning any power quality assessment, protective device setting verification, or load measurement performed with a non-TRMS instrument on a data centre circuit is potentially dangerously unreliable.</p></div>
+      <div class="card" style="margin-top:30px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to test your understanding of Section 14?</p>
+        <a href="assessment-14-power-quality.html" class="btn-cta">Take the Assessment &rarr;</a>
+      </div>
+      <div class="pager">
+        <a href="guide-13-source-transfers.html">&larr; Source Transfers and Couplings</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-15-regulatory-framework.html">The Regulatory Framework and Electrical Qualifications &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

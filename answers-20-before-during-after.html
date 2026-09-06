@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answers &mdash; Section 20 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-20-before-during-after.html">Before / During / After — The Operator’s Checklists</a> &rsaquo; <a href="assessment-20-before-during-after.html">Assessment</a> &rsaquo; Answers</div>
+    <div class="eyebrow">Answers &middot; Section 20</div>
+    <h1>Before / During / After — The Operator’s Checklists</h1>
+    <p>Model answers and multiple-choice key.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice &mdash; Answer Key</h2>
+        <div style="margin-bottom:14px;"><p><strong>1. What is a “toolbox talk” as referenced in the guide’s before-operation checklist?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; A team briefing immediately before an operation, covering roles, sequence, risks, hold points, and the stop criterion</p></div><div style="margin-bottom:14px;"><p><strong>2. Why must locks and earths be removed “COUNTED” at the end of an operation?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; To ensure the number removed exactly matches the number applied, catching a forgotten lock or earth before re-energising</p></div><div style="margin-bottom:14px;"><p><strong>3. What is the purpose of announcing an action aloud and having it confirmed by a second participant during a MOP?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; It forces conscious deliberation before the action and gives a second person an explicit chance to catch an error before it becomes irreversible</p></div><div style="margin-bottom:14px;"><p><strong>4. What should happen if an unexpected alarm occurs during a MOP execution?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; STOP immediately — an unexpected alarm requires the operation to pause and be assessed before continuing</p></div><div style="margin-bottom:14px;"><p><strong>5. What must be checked and restored after an operation, in addition to removing locks and earths?</strong><br>
+        Correct answer: <span class="status-pill done">A</span> &mdash; Redundancy restored and verified (load sharing back to nominal), keys returned to their home, NOC/customer notified, and lessons learned recorded</p></div>
+        <h2 style="margin-top:20px;">Long Answer &mdash; Model Points</h2>
+        <div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">1. Explain why the “before, during, after” checklist structure mirrors practices used in aviation and other high-reliability industries, and describe what each phase is specifically designed to catch or prevent.</p><p>The three-phase structure exists because different types of error occur at different points in an operation: before-checks catch preparation gaps (wrong or missing documentation, unnoticed pre-existing faults, unqualified participants) before any physical action begins; during-checks catch execution errors in real time (a deviation from an expected result, an unexpected alarm) while there is still an opportunity to safely stop; after-checks catch completion gaps (a forgotten lock, an unrestored redundancy state) before the site is considered fully returned to normal. Aviation and other high-reliability industries structure their checklists identically because the same logical need — catching different error types at the point they’re most detectable — applies regardless of the specific domain.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">2. Describe the “announce aloud, confirm” verbal protocol and explain why it is used even though the same information is already written on the MOP.</p><p>Even though the action is written on the MOP, verbalising it aloud forces the person performing it to consciously articulate exactly what they are about to do, which interrupts “autopilot” execution where someone might perform a nearby but incorrect action out of habit or misreading. The second participant’s spoken confirmation (“confirmed, QF12”) additionally creates an explicit, real-time checkpoint where a second set of eyes can catch a wrong device or wrong action before it is physically executed, rather than only after the fact during a later line-by-line MOP review.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">3. Explain why “any deviation = stop in a safe state + call operations” is treated as an absolute rule with no informal exceptions (“never tinker during a MOP”).</p><p>Any deviation between an expected and observed result signals that the specialist’s understanding of the installation’s actual state may be wrong in some way not yet identified — proceeding despite this uncertainty risks compounding an unknown problem with further actions based on a false picture of reality. “Tinkering” (informally improvising a fix rather than stopping) specifically invalidates the risk analysis that was performed for the planned, reviewed sequence, since any improvised action was never assessed by the peer review or hold-point process — this is why the rule is absolute rather than left to individual judgement in the moment.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">4. Describe the specific purpose of the counted-removal principle for locks and earths, and explain what failure mode it is specifically designed to catch.</p><p>The counted-removal principle catches the single most dangerous and common LOTO- related failure: a lock or earth that was genuinely applied during isolation but is then forgotten and left in place (or, in the more dangerous reverse case, a device believed to be locked/earthed that in fact never received its lock or earth in the first place). By requiring the number removed to exactly equal the number applied — a simple, unambiguous arithmetic check — any discrepancy immediately signals that something is not accounted for, forcing investigation before the equipment is considered safe to re- energise.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">5. Explain why “hot lessons learned” are captured immediately after an operation (in the after-checklist) rather than at some later, more convenient time.</p><p>Capturing lessons learned immediately, while the details are fresh and the specific deviations, surprises, or near-misses are still clearly remembered by everyone involved, produces far more accurate and useful input for improving the MOP than trying to reconstruct the same details days or weeks later from memory. This immediacy is what allows the guide’s final step (“MOP update for next time”) to genuinely reflect what actually happened during execution, rather than a filtered or incomplete recollection.</p></div>
+      </div>
+      <div class="pager">
+        <a href="assessment-20-before-during-after.html">&larr; Back to Assessment</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-21-red-list.html">The Red List — The Mistakes Never to Make &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

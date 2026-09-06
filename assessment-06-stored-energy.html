@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assessment &mdash; Section 06 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-06-stored-energy.html">Stored Energy — Capacitors and Batteries</a> &rsaquo; Assessment</div>
+    <div class="eyebrow">Assessment &middot; Section 06</div>
+    <h1>Stored Energy — Capacitors and Batteries</h1>
+    <p>Work through the multiple-choice and long-answer questions, then check your answers.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice</h2>
+        <div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">1. What is the formula for energy stored in a capacitor?</p><div class="check-row"><input type="radio" name="q0" style="accent-color:#F58220;width:16px;height:16px;"><label>A) E = C × U</label></div><div class="check-row"><input type="radio" name="q0" style="accent-color:#F58220;width:16px;height:16px;"><label>B) E = U² ÷ C</label></div><div class="check-row"><input type="radio" name="q0" style="accent-color:#F58220;width:16px;height:16px;"><label>C) E = C ÷ U</label></div><div class="check-row"><input type="radio" name="q0" style="accent-color:#F58220;width:16px;height:16px;"><label>D) E = ½ × C × U²</label></div></div><div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">2. Why is a capacitor’s discharge time deliberately slow (several minutes)?</p><div class="check-row"><input type="radio" name="q1" style="accent-color:#F58220;width:16px;height:16px;"><label>A) Fast discharge would damage the inverter</label></div><div class="check-row"><input type="radio" name="q1" style="accent-color:#F58220;width:16px;height:16px;"><label>B) A bleeder resistor small enough to discharge it quickly would overheat during normal, continuous operation</label></div><div class="check-row"><input type="radio" name="q1" style="accent-color:#F58220;width:16px;height:16px;"><label>C) Slow discharge improves the UPS’s overall efficiency</label></div><div class="check-row"><input type="radio" name="q1" style="accent-color:#F58220;width:16px;height:16px;"><label>D) It has no practical reason; it is simply a design tradition</label></div></div><div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">3. Why does a battery remain dangerous even after all AC sources to a UPS are opened and locked?</p><div class="check-row"><input type="radio" name="q2" style="accent-color:#F58220;width:16px;height:16px;"><label>A) Batteries are charged by the AC input and retain charge only briefly</label></div><div class="check-row"><input type="radio" name="q2" style="accent-color:#F58220;width:16px;height:16px;"><label>B) A battery is itself a source that produces voltage by chemical reaction, independent of any AC connection</label></div><div class="check-row"><input type="radio" name="q2" style="accent-color:#F58220;width:16px;height:16px;"><label>C) Opening the AC input reverses the battery’s polarity</label></div><div class="check-row"><input type="radio" name="q2" style="accent-color:#F58220;width:16px;height:16px;"><label>D) Batteries are only dangerous while actively charging</label></div></div><div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">4. What is the only way to fully isolate a UPS battery?</p><div class="check-row"><input type="radio" name="q3" style="accent-color:#F58220;width:16px;height:16px;"><label>A) Wait for the capacitor discharge time to elapse</label></div><div class="check-row"><input type="radio" name="q3" style="accent-color:#F58220;width:16px;height:16px;"><label>B) Open the UPS’s AC rectifier input</label></div><div class="check-row"><input type="radio" name="q3" style="accent-color:#F58220;width:16px;height:16px;"><label>C) Disconnect the UPS from the network cable</label></div><div class="check-row"><input type="radio" name="q3" style="accent-color:#F58220;width:16px;height:16px;"><label>D) Open its own dedicated switching device (QF-BAT), then lock it</label></div></div><div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">5. What additional hazard do lithium-ion batteries introduce compared to VRLA batteries?</p><div class="check-row"><input type="radio" name="q4" style="accent-color:#F58220;width:16px;height:16px;"><label>A) Inability to be isolated with a breaker</label></div><div class="check-row"><input type="radio" name="q4" style="accent-color:#F58220;width:16px;height:16px;"><label>B) Lower short-circuit current</label></div><div class="check-row"><input type="radio" name="q4" style="accent-color:#F58220;width:16px;height:16px;"><label>C) A requirement for higher AC input voltage</label></div><div class="check-row"><input type="radio" name="q4" style="accent-color:#F58220;width:16px;height:16px;"><label>D) Thermal runaway — a self-sustaining, escalating chemical reaction that cannot simply be stopped by removing electrical power</label></div></div>
+        <h2 style="margin-top:10px;">Long Answer</h2>
+        <div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">1. Explain why the manufacturer’s discharge time is described as “a necessary condition, not a proof,” and describe the correct verification procedure that follows it.</p><textarea rows="4" data-track-field="guide-6-longq-0" placeholder="Write your answer..."></textarea></div><div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">2. Using the formula E = ½CU², explain why doubling the DC bus voltage has a much larger effect on stored energy than doubling the capacitance, and why this matters for UPS safety.</p><textarea rows="4" data-track-field="guide-6-longq-1" placeholder="Write your answer..."></textarea></div><div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">3. Describe, step by step, why “opening all the AC inputs of a UPS” does not make the battery circuit safe, and what must be done in addition.</p><textarea rows="4" data-track-field="guide-6-longq-2" placeholder="Write your answer..."></textarea></div><div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">4. Explain why shorting a charged capacitor with an uninsulated tool is dangerous, and what the correct alternative is if a discharge tool is needed.</p><textarea rows="4" data-track-field="guide-6-longq-3" placeholder="Write your answer..."></textarea></div><div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">5. Compare the specific risks (voltage, arc behaviour, failure mode) of a UPS’s capacitor bus versus its battery string.</p><textarea rows="4" data-track-field="guide-6-longq-4" placeholder="Write your answer..."></textarea></div>
+      </div>
+      <div class="card" style="margin-top:20px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Finished? Check your answers.</p>
+        <a href="answers-06-stored-energy.html" class="btn-cta">View Answers &rarr;</a>
+      </div>
+      <div class="pager">
+        <a href="guide-06-stored-energy.html">&larr; Back to Section 06</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <span></span>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

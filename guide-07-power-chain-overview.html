@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 07 &mdash; The Data Centre Power Chain — Overview | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; The Data Centre Power Chain — Overview</div>
+    <div class="eyebrow">Section 07</div>
+    <h1>The Data Centre Power Chain — Overview</h1>
+    <p></p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose"><p>The guide’s redundancy topology table (N, N+1, 2N, distributed redundant) maps directly onto the industry-standard Uptime Institute Tier Classification System, the globally recognised benchmark for evaluating data centre infrastructure reliability, first created in 1993.</p><p>Additional context from current industry practice:</p><p>Uptime Institute Tiers and concurrent maintainability. Tier I facilities offer no redundancy — any maintenance means downtime — corresponding to the guide’s “N”</p><p>topology. Tier II adds redundant components (extra UPS modules, generators, chillers) but still only a single distribution path, so a distribution-path failure still causes an outage. Tier III facilities are concurrently maintainable: they have redundant components AND multiple independent distribution paths, so each and every component needed to support the IT load can be shut down and maintained without impacting operations — this directly corresponds to the guide’s N+1 and 2N/distributed-redundant topologies, and is the level the guide’s “reflex no. 1” (residual load calculation) exists to protect. Tier IV adds fault tolerance on top of concurrent maintainability: the facility can also absorb an unplanned single-component failure without any impact, typically through fully duplicated (2N or 2N+1) active paths.</p><p>Availability figures. Industry figures commonly associate Tier III with an availability target around 99.982% (roughly 1.6 hours of downtime per year) and Tier IV with around 99.995% (roughly 26 minutes per year) — illustrating that the jump from “concurrently maintainable” to “fault tolerant” represents a large jump in capital cost for a proportionally smaller (but operationally critical) uptime improvement.</p><p>Distributed redundancy (3N/2, catcher topologies). The guide’s “3N/2” example (chapter 12.5) reflects a real, widely used design pattern in hyperscale and colocation data centres: rather than a strict 2N (double everything), blocks of capacity are sized so that any one block can fail or be isolated while the remaining blocks absorb its load with a defined margin — offering most of 2N’s resilience at meaningfully lower capital cost, at the expense of a more complex, cross-linked load-transfer scheme that must be tracked precisely (exactly the caution the guide raises in section 12.5).</p></div>
+      <div class="card" style="margin-top:30px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to test your understanding of Section 07?</p>
+        <a href="assessment-07-power-chain-overview.html" class="btn-cta">Take the Assessment &rarr;</a>
+      </div>
+      <div class="pager">
+        <a href="guide-06-stored-energy.html">&larr; Stored Energy — Capacitors and Batteries</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-08-reading-sld.html">Reading a Single Line Diagram &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

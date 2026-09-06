@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answers &mdash; Section 21 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-21-red-list.html">The Red List — The Mistakes Never to Make</a> &rsaquo; <a href="assessment-21-red-list.html">Assessment</a> &rsaquo; Answers</div>
+    <div class="eyebrow">Answers &middot; Section 21</div>
+    <h1>The Red List — The Mistakes Never to Make</h1>
+    <p>Model answers and multiple-choice key.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice &mdash; Answer Key</h2>
+        <div style="margin-bottom:14px;"><p><strong>1. Why is “operating a disconnector on load” the first item on the red list?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; A disconnector has no breaking capacity, so operating it under load produces an internal arc and possible cubicle explosion</p></div><div style="margin-bottom:14px;"><p><strong>2. What is the specific danger of “closing an earthing switch without a prior voltage absence test”?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; It creates a solid short-circuit deliberately, if the circuit is in fact still live</p></div><div style="margin-bottom:14px;"><p><strong>3. Why does the red list forbid “relying on the mimic, the BMS, SCADA or the VPIS to declare a circuit dead”?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; A sensor can fail or lie, and the diagram can be outdated; only the physical voltage absence test counts as proof</p></div><div style="margin-bottom:14px;"><p><strong>4. Why is “launching an operation while redundancy is already consumed” forbidden without a formal waiver?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; Because isolating further equipment when the spare capacity is already used up by an existing fault risks overloading the surviving equipment</p></div><div style="margin-bottom:14px;"><p><strong>5. What must happen before opening a UPS cover, per the red list’s final item?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; The manufacturer’s discharge time must fully elapse AND a DC test for dead must confirm voltage is below the safe threshold</p></div>
+        <h2 style="margin-top:20px;">Long Answer &mdash; Model Points</h2>
+        <div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">1. Choose three items from the red list and explain, for each, which earlier section of the guide establishes the underlying principle that the red-list item violates.</p><p>Example selections: “Operating a disconnector on load” violates the switching-device- capability distinctions established in section 9.1 (a disconnector has zero breaking capacity). “Relying on the mimic/BMS/SCADA/VPIS to declare a circuit dead” violates the voltage-absence-test principle from section 18.3 and the VPIS-as-indication-not-proof principle from section 17.4. “Creating two simultaneous neutral-earth links in TN-S” violates the neutral-transfer discipline established in section 5.8, where the guide explains exactly why this produces circulating currents and nuisance ground-fault tripping.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">2. Explain why “bypassing, forcing or defeating an interlock” is treated as an absolute prohibition, even when a specialist believes they understand why the interlock is (in their view) unnecessarily blocking a manoeuvre.</p><p>An interlock is specifically engineered to make a dangerous sequence physically or logically impossible when a required safety condition is genuinely not met (section 17) — if a specialist believes an interlock is unnecessarily blocking them, the far more statistically likely explanation is that they are missing information about why the condition matters (an undetected fault elsewhere, a subtlety in the site’s specific wiring, a condition the interlock was specifically designed to catch), not that the interlock itself is wrong. Treating interlock defeat as absolutely prohibited (except through the tightly controlled, documented exceptional process in section 17.5) removes the possibility of a confident-but-incorrect individual judgement call overriding a physical safety barrier.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">3. Describe the specific danger of “forgetting a source” during isolation, using the UPS’s three-sources-plus-capacitors example, and explain how the isolation methodology (section 18) is designed to prevent this.</p><p>A UPS has three active sources (rectifier input, bypass input, battery) plus capacitors that retain stored energy — if a specialist isolates only the two AC sources (rectifier and bypass) and believes the unit is now dead, they would still be working on equipment where the battery remains a live, continuously-produced DC source and the capacitors remain charged for several minutes. The isolation methodology in section 18 prevents this specifically through step 1 (“separation… of ALL possible sources… think of possible back-feeds”) and the explicit reminder throughout sections 6, 11.3 and 18.6 that battery and capacitor circuits require their own dedicated isolation devices (QF-BAT) and discharge-time-plus-measurement verification, entirely separate from the AC isolation steps.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">4. Explain why “carrying on despite a deviation” is on the red list, and connect this to the MOP stop-rule principle described in section 19.2 and 20.2.</p><p>The MOP’s entire safety logic depends on each action producing a specific, pre-defined, verifiable expected result; a deviation from that expected result means the specialist’s model of the installation’s actual state has diverged from reality in some way not yet understood. Continuing despite this (“that lamp has always been odd”) means proceeding to take further actions based on a picture of the world that is already known to be wrong in at least one respect — this directly contradicts the stop-rule principle (sections 19.2 and 20.2) that any difference between expected and observed result requires an immediate stop to a safe state, precisely because further action under an unverified assumption compounds risk rather than reducing it.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">5. Why does the guide describe this list as containing “the mistakes never to make,” rather than simply repeating general safety advice? What is the practical value of a short, absolute list compared to a longer set of general guidelines?</p><p>General safety advice, phrased as broad principles, requires interpretation and judgement in the moment — exactly the conditions under which stress, time pressure, or unfamiliarity with a specific site can lead to a reasonable-sounding but wrong decision. A short, absolute, memorable list of specific “never do this” actions removes ambiguity: there is no interpretation required about whether a specific situation counts as an exception, because the list explicitly states there are no exceptions. This is a deliberate trade-off — the list sacrifices nuance for reliability under pressure, which is precisely the situation in which a person is most likely to need it. End of expanded sections 1–21. This document combines the original guide’s technical content with additional context drawn from IEC 60364, IEC 60617, IEC 60947, IEC 62040, IEC 61936, IEEE 519-2022, NFPA 70E (2024 edition), OSHA 29 CFR 1910.147, EN 50110-1, NF C 18-510, and Uptime Institute Tier Classification materials, alongside knowledge-check questions and answers for each section.</p></div>
+      </div>
+      <div class="pager">
+        <a href="assessment-21-red-list.html">&larr; Back to Assessment</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide.html">All Sections &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

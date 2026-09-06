@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answers &mdash; Section 10 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-10-mv-substation.html">The MV Substation and Its Switchgear</a> &rsaquo; <a href="assessment-10-mv-substation.html">Assessment</a> &rsaquo; Answers</div>
+    <div class="eyebrow">Answers &middot; Section 10</div>
+    <h1>The MV Substation and Its Switchgear</h1>
+    <p>Model answers and multiple-choice key.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice &mdash; Answer Key</h2>
+        <div style="margin-bottom:14px;"><p><strong>1. What is a Ring Main Unit (RMU)?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; A compact, sealed MV switchgear type widely used for distribution due to its small footprint</p></div><div style="margin-bottom:14px;"><p><strong>2. What is the purpose of the VPIS (Voltage Presence Indicating System)?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; To indicate, via lamps fed by capacitive dividers, whether a cubicle phase is live — as an indication only, not a proof</p></div><div style="margin-bottom:14px;"><p><strong>3. What does DGPT2 (or the older Buchholz relay) detect on an oil-immersed transformer?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; Gas, pressure, and temperature changes indicating an internal fault, sending a trip signal to the associated cubicle</p></div><div style="margin-bottom:14px;"><p><strong>4. What is the key difference between a DM1 (circuit breaker) and QM/PM (switch-fuse combination) transformer protection cubicle?</strong><br>
+        Correct answer: <span class="status-pill done">A</span> &mdash; DM1 uses an adjustable digital protection relay; QM/PM relies solely on the fixed rating of the HRC fuses, with no adjustable relay</p></div><div style="margin-bottom:14px;"><p><strong>5. Why does the metering cubicle (CM/GBC) have no switching device?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; Its function is purely metrological measurement (VT/CT for the utility meter), and its covers carry utility seals that must never be touched without the utility present</p></div>
+        <h2 style="margin-top:20px;">Long Answer &mdash; Model Points</h2>
+        <div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">1. Explain why the VPIS is described as “an indication, never a proof,” and describe what must always be done in addition before working on a cubicle.</p><p>The VPIS lamps are fed by a tiny capacitively-coupled signal picked off the bushings — lit means the phase is very likely live, but “off” could equally mean a blown lamp or a failed capacitive divider, not necessarily an absent voltage. Because of this failure mode, the VPIS can never be relied on as proof of a dead circuit; the mandatory step in addition is a full voltage absence test using a compliant, independently tested detector (tested on a known live source before and after the measurement).</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">2. Compare the DM1 (circuit breaker) and QM/PM (switch-fuse) transformer protection cubicle variants, including when each is typically used and how each is identified on a diagram and in the field.</p><p>DM1 uses a true MV circuit breaker (SF6 or vacuum) with CTs feeding a digital protection relay offering adjustable, remotely signalled protection functions (ANSI 50/51 overcurrent, 50N/51N earth fault, DGPT2/Buchholz trip input) — the standard choice above roughly 800–1,250 kVA or wherever adjustable, remotely visible protection is wanted. QM/PM instead uses a switch-disconnector combined with three HRC fuses fitted with a striker (so one blown fuse trips all three phases); there is no adjustable relay, since the protection level is fixed entirely by the fuse rating — a simpler, lower- cost solution for modest transformer ratings. On the diagram, DM1 shows a breaker cross plus CT and relay symbols; QM/PM shows a switch plus three fuse rectangles in series.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">3. Describe the function and significance of the bus tie cubicle between two half-busbars, and explain the “2 keys for 3 breakers” interlock referenced in relation to it.</p><p>The bus tie cubicle joins or splits two half-busbars fed by separate incomers, allowing the whole substation to be fed from a single incomer during maintenance of the other. The “2 keys for 3 breakers” interlock exists because only two keys circulate among the three locks (incomer A, incomer B, tie): since closing any breaker consumes and traps a key, at most two of the three breakers can ever be closed simultaneously — meaning the two incomers can never be paralleled through the tie, protecting against paralleling two non-synchronised MV sources and against exceeding the switchgear’s combined breaking capacity.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">4. Explain why the metering cubicle is treated differently from every other cubicle in the substation in terms of who may work on it.</p><p>The metering cubicle houses metrological measurement equipment (VTs, metering CTs) whose accuracy and integrity are governed by contractual/regulatory billing requirements between the utility and the customer. Its covers carry the utility’s own physical seals, and tampering with a sealed metering circuit is both a technical risk (compromising billing accuracy) and typically a contractual/legal breach — hence the guide’s instruction to never work on it without the utility present.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">5. Using the cubicle summary table’s logic, explain how a specialist would identify, purely from visual inspection in the field (without a diagram), which type of cubicle they are looking at.</p><p>Incomer (IM): switch-disconnector, downstream earthing switch, VPIS lamps, cables at the bottom, no fuses visible. Transformer protection (QM/PM): a fuse-cover door or window on the front showing rating labels, blown-fuse indicators. Transformer protection (DM1): a digital protection relay screen, trip LED, spring-charging handle. Metering (CM/GBC): utility seals visible on covers, no operable switching device at all. Bus tie + riser: positioned in the middle of the cubicle line-up, showing a through-bar mimic and a distinctive multi-key interlock arrangement.</p></div>
+      </div>
+      <div class="pager">
+        <a href="assessment-10-mv-substation.html">&larr; Back to Assessment</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-11-ups-architecture.html">The UPS — Architecture, Sources, Synchronisation and Load &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

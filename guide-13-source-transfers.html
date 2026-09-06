@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 13 &mdash; Source Transfers and Couplings | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; Source Transfers and Couplings</div>
+    <div class="eyebrow">Section 13</div>
+    <h1>Source Transfers and Couplings</h1>
+    <p></p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose"><p>The physics of paralleling two AC sources — and the catastrophic consequence of doing so without synchronisation — is one of the oldest and most rigorously codified areas of power systems engineering, governed internationally by IEEE C37.90/IEEE C50.12 (generator</p><p>protection and synchronising practices) and, in the UK, by the Engineering Recommendation G59/G99 for embedded generation connecting to distribution networks.</p><p>Additional context:</p><p>The synchro-check relay (ANSI 25). This function — referenced throughout the guide as the device that verifies voltage, frequency, phase-angle and phase-sequence match before permitting closure — is one of the oldest standardised protection functions in the ANSI/IEEE device numbering scheme (IEEE C37.2), reflecting how long paralleling hazards have been formally recognised in the power industry; the fundamental physics (I = ΔU ÷ X, with a 180° phase difference producing an effective short-circuit at twice nominal voltage) has not changed since early 20th-century AC power system design.</p><p>Closed vs. open transition and utility interconnection rules. Utilities worldwide typically require any customer-side closed-transition (make-before-break) transfer involving momentary parallel with the public grid to be explicitly agreed and protected against reverse power flow, anti-islanding, and fault contribution concerns — which is why the guide notes that “studied prolonged parallel… with the public network” requires “a grid operator agreement” as a hard precondition, not merely good practice. Closed- transition transfers are popular specifically because they avoid even the brief break- before-make interruption of open transition, which — while often just tens of milliseconds — can still be enough to disturb sensitive UPS or IT equipment upstream of any local UPS protection.</p><p>Reverse power protection (ANSI 32). When a generator is running in parallel with the utility or another generator, if its prime mover (engine/turbine) loses power while the electrical connection remains closed, the generator can be driven as a motor by the other source instead of generating — this “motoring” condition can damage the prime mover (particularly turbines) and is specifically what reverse-power protection (ANSI function 32) is designed to detect and trip on, which is why the guide lists it among the required protections for any studied, prolonged generator/utility parallel operation.</p></div>
+      <div class="card" style="margin-top:30px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to test your understanding of Section 13?</p>
+        <a href="assessment-13-source-transfers.html" class="btn-cta">Take the Assessment &rarr;</a>
+      </div>
+      <div class="pager">
+        <a href="guide-12-residual-load.html">&larr; Calculating the Residual Load — Method and Worked Examples</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-14-power-quality.html">Power Quality — Harmonics and Other Common Problems &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

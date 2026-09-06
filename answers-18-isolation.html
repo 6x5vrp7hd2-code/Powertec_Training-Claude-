@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answers &mdash; Section 18 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-18-isolation.html">Isolation — From the Order of Operations to the Hand-Over</a> &rsaquo; <a href="assessment-18-isolation.html">Assessment</a> &rsaquo; Answers</div>
+    <div class="eyebrow">Answers &middot; Section 18</div>
+    <h1>Isolation — From the Order of Operations to the Hand-Over</h1>
+    <p>Model answers and multiple-choice key.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice &mdash; Answer Key</h2>
+        <div style="margin-bottom:14px;"><p><strong>1. What are the five steps of isolation, in order, as described by the guide?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; Separation, locking and tagging, identification, voltage absence test, earthing</p></div><div style="margin-bottom:14px;"><p><strong>2. What is the correct order between breaker/switch, disconnector, and earthing switch when isolating equipment?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; First interrupt current with the breaker/switch (device capable of it), then isolate off-load with the disconnector, then lock, identify, test for dead, and finally earth</p></div><div style="margin-bottom:14px;"><p><strong>3. Why must the third step of the “live-dead-live” voltage absence test (re-testing the detector on a known live source) never be skipped?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; Without it, a “zero” reading caused by a failed detector could be wrongly taken as proof the circuit is dead</p></div><div style="margin-bottom:14px;"><p><strong>4. Why is earthing mandatory in MV immediately after the voltage absence test, and required in LV wherever re-energising is possible?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; It protects against return voltages, accidental re-energising, and induced voltages while work is in progress</p></div><div style="margin-bottom:14px;"><p><strong>5. According to the guide, what must never be forgotten when separating “all possible sources” during isolation of an item like a UPS?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; Batteries, capacitors, back-feeds through ties, and back-feeds through transformers stepping voltage up from the LV side</p></div>
+        <h2 style="margin-top:20px;">Long Answer &mdash; Model Points</h2>
+        <div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">1. Explain why the isolation sequence is divided into a “first stage” (separation and locking) and later steps (identification, test for dead, earthing), and who typically performs each stage.</p><p>Separating the stages allows a second, independent person (the work leader) to verify the isolation before work actually begins, rather than relying on a single person’s judgement throughout. The isolation officer (BC/HC in the French system) performs separation and locking — physically removing and securing all sources — while the work leader (B2/H2), within a two-stage isolation scheme, performs identification, the voltage absence test, and earthing themselves immediately before starting work, providing an independent cross-check at the critical moment work is about to begin.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">2. Describe the “live-dead-live” voltage absence test protocol in full, and explain the reasoning behind each of its three steps.</p><p>Step one: test the detector on a source known to be live, confirming the detector itself functions correctly. Step two: measure on the target equipment across all relevant conductor combinations (phase-phase, phase-neutral, phase-earth, neutral-earth), expecting an indication of absence. Step three: re-test the detector on the known live source again, confirming it has not failed silently between steps one and two. Without step three, a detector that failed partway through the test could produce a false “zero” reading in step two that would be wrongly trusted as genuine proof of a dead circuit.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">3. Explain why the return-to-service order must be the exact reverse of the isolation order, and describe the specific danger of reclosing a disconnector onto a closed downstream breaker.</p><p>The return-to-service order must exactly mirror the isolation order because the isolation sequence was itself built around what each device is physically capable of doing safely: current must be interrupted before an off-load isolating device is operated, so re- energising must equally close the current-interrupting device (breaker) last, after any off-load device (disconnector) has already been safely closed with nothing loaded downstream. Reclosing a disconnector onto an already-closed downstream breaker would mean asking a device with no breaking/making capacity to make a current — since a disconnector has no arc-quenching mechanism, this would produce an arc and potential explosion, precisely the “operating a disconnector on load” mistake flagged in the red list (section 21).</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">4. Using the UPS mini-MOP example (section 18.5), explain why the note about “the MBB supply being the same cable as the UPS bypass input” is described as “the point of no return of the MOP.”</p><p>In most UPS designs, the same physical cable feeds both the static bypass input and the MBB, upstream of an internal bypass input breaker. If a specialist assumed these were separate feeders and opened only the “bypass” feeder at the MSB while the load was already on the MBB (fed by that same cable), they would inadvertently cut power to the load itself — a serious operational error. Because this detail can only be correctly determined by reading the specific site’s single line diagram (not from memory or assumption, since designs vary), the guide flags it as the single point in the MOP where getting it wrong has immediate, serious consequences, making careful diagram verification at that exact step non-negotiable.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">5. Compare the guide’s five-step isolation sequence with the general concept of Lock-Out Tag-Out (LOTO) as used under OSHA 29 CFR 1910.147, highlighting the structural similarities despite arising from different regulatory traditions.</p><p>Both frameworks require: identifying and isolating all energy sources (not just the obvious one), physically locking (and, in the French/European tradition, tagging) each isolated device with personal accountability (one key = one person), verifying the isolation independently rather than trusting the isolating action alone, and specifically addressing stored energy (capacitors, batteries, springs, hydraulic/pneumatic pressure) that persists after the primary source is removed. The specific named steps, documentation formats, and role titles differ (French “consignation” stages and named qualifications vs. OSHA’s LOTO procedure and “authorized employee” terminology), but the underlying safety engineering — reach and verifiably prove a zero-energy state before work begins — is identical.</p></div>
+      </div>
+      <div class="pager">
+        <a href="assessment-18-isolation.html">&larr; Back to Assessment</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-19-the-mop.html">The MOP — Complete Drafting Methodology &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

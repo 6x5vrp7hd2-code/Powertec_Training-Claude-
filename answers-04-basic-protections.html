@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answers &mdash; Section 04 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-04-basic-protections.html">Basic Protections</a> &rsaquo; <a href="assessment-04-basic-protections.html">Assessment</a> &rsaquo; Answers</div>
+    <div class="eyebrow">Answers &middot; Section 04</div>
+    <h1>Basic Protections</h1>
+    <p>Model answers and multiple-choice key.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice &mdash; Answer Key</h2>
+        <div style="margin-bottom:14px;"><p><strong>1. What does an HRC fuse do when current exceeds its rated value?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; It melts a calibrated wire, interrupting the circuit</p></div><div style="margin-bottom:14px;"><p><strong>2. What are the two release types normally combined inside a circuit breaker?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; A thermal (long-time) release for overload and a magnetic (instantaneous) release for short-circuit</p></div><div style="margin-bottom:14px;"><p><strong>3. What principle underlies the operation of a residual current device (RCD)?</strong><br>
+        Correct answer: <span class="status-pill done">A</span> &mdash; All current going out through the phases must return through the neutral; any imbalance is a residual current</p></div><div style="margin-bottom:14px;"><p><strong>4. In the TT earthing system, why is an RCD not optional but mandatory?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; Because the fault current through two separate earth electrodes and soil is too small for an ordinary breaker to detect</p></div><div style="margin-bottom:14px;"><p><strong>5. What does an insulation monitoring device (IMD) do in an IT earthing system?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; It continuously measures insulation resistance to earth and raises an alarm on the first fault, without tripping</p></div>
+        <h2 style="margin-top:20px;">Long Answer &mdash; Model Points</h2>
+        <div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">1. Explain why a fuse “is replaced, not reset” and describe the operational consequence of this for a data centre maintenance team.</p><p>A fuse element is physically destroyed (melted) when it operates; there is no mechanism to reset it, so it must be physically replaced, in sets of three for three-phase transformer protection, since the un-blown fuses will have suffered the same thermal stress and may be weakened even though they didn’t melt. This means every fuse operation requires site access, spare stock, and de-energised replacement — unlike a breaker, which can simply be reclosed after a transient fault is cleared (once the cause has been investigated).</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">2. Describe the difference between an RCD’s detection principle and a standard circuit breaker’s detection principle, and explain why this makes the RCD uniquely suited to detecting small earth faults.</p><p>A circuit breaker measures absolute current magnitude on a conductor and trips when it exceeds a threshold; an RCD instead sums the current going out and coming back through all live conductors passed through its toroid, and trips only if that sum deviates from zero by more than its IΔn setting. This differential/comparative principle lets the RCD detect very small leakage-to-earth currents (a few tens of milliamps) that would never register as “excessive” against an absolute overcurrent threshold, which is exactly the case for a high-impedance earth fault through soil.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">3. Explain why the IMD does not trip the circuit on a first fault in an IT system, and what organisational requirement this creates for the site.</p><p>In IT systems, the neutral is isolated or high-impedance earthed, so a single fault to earth produces only a small capacitive leakage current — not enough to be dangerous or to justify an automatic outage. Tripping on every first fault would defeat the entire purpose of the IT system (continuity of service), so instead the IMD raises an alarm, and the site must have a fault-finding organisation in place to locate and repair the fault while the installation continues running, before a second fault (which would create a genuine short-circuit) can occur.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">4. A PDU feeds 40 servers, each with a few milliamps of normal EMC filter leakage current. Explain why this can cause nuisance tripping of a 30 mA RCD, and why this is a key reason TT is avoided in critical IT distribution.</p><p>Each server’s power supply EMC filter leaks a small amount of current to earth as part of normal, harmless operation (filtering electrical noise). With 40 servers on one PDU, these small leakages sum together, and the cumulative total can exceed the 30 mA trip threshold of a standard RCD even though no actual fault exists — causing the RCD to trip the entire PDU for no real safety reason. Since TT systems require RCDs for protection, this makes TT structurally unsuitable for critical IT distribution, whereas TN- S (which relies on high fault currents and ordinary breakers rather than RCDs) avoids this nuisance-tripping problem entirely.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">5. Compare the fuse, circuit breaker, RCD and IMD in terms of what fault type each is principally designed to catch.</p><p>Fuse: primarily short-circuit and severe overload (very fast on high current, especially in HRC/gR-aR forms for semiconductor protection). Circuit breaker: both overload (thermal/long-time) and short-circuit (magnetic/instantaneous), the general-purpose device. RCD: earth faults, specifically small leakage currents invisible to overcurrent devices, used for personnel and fire protection. IMD: earth faults in IT systems specifically, providing an alarm (not a trip) so continuity of service is preserved.</p></div>
+      </div>
+      <div class="pager">
+        <a href="assessment-04-basic-protections.html">&larr; Back to Assessment</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-05-earthing-systems.html">Earthing Systems — What Happens to the Fault Current? &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 10 &mdash; The MV Substation and Its Switchgear | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; The MV Substation and Its Switchgear</div>
+    <div class="eyebrow">Section 10</div>
+    <h1>The MV Substation and Its Switchgear</h1>
+    <p></p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose"><p>MV switchgear technology and terminology described here (AIS, GIS, RMU) are formally defined and tested under IEC 62271 (high-voltage switchgear and controlgear), the umbrella standard covering everything from ring main units to full air-insulated substations.</p><p>Additional context:</p><p>RMU (Ring Main Unit) prevalence. Compact SF6 or (increasingly, for environmental reasons) dry-air/vacuum-insulated ring main units have become the dominant technology for MV distribution in urban and data centre environments specifically because of their small footprint and sealed, maintenance-light design compared to older air-insulated switchgear — a trend accelerated in recent years by regulatory pressure to phase out SF6 (a potent greenhouse gas) under EU F-Gas Regulation revisions, pushing manufacturers toward alternative insulating gases and vacuum interrupters.</p><p>ANSI protection function numbering. The ANSI/IEEE device function number system (50, 51, 25, 27, 32, 87, etc.) referenced in section 10.3 is standardised by IEEE C37.2, and is used globally alongside IEC terminology — a protection relay’s front panel or configuration software will typically show these numeric codes regardless of whether the surrounding switchgear follows IEC or ANSI mechanical conventions, making them one of the few genuinely universal shorthand references in the industry.</p><p>DGPT2 / Buchholz relay purpose. These transformer-integral protection devices (Gas, Pressure, Temperature detection for modern sealed transformers; the older Buchholz relay for conservator-type oil transformers) detect internal transformer faults — arcing, insulation breakdown, overheating — that produce gas or pressure changes inside the tank before the fault becomes severe enough to be seen from outside via current-based protection alone. Their trip signal is wired directly into the associated MV protection cubicle precisely because a transformer-internal fault may not initially draw enough current to trip an overcurrent relay, but represents a real and escalating internal failure.</p></div>
+      <div class="card" style="margin-top:30px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to test your understanding of Section 10?</p>
+        <a href="assessment-10-mv-substation.html" class="btn-cta">Take the Assessment &rarr;</a>
+      </div>
+      <div class="pager">
+        <a href="guide-09-switching-devices.html">&larr; Switching Devices and Their Performance</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-11-ups-architecture.html">The UPS — Architecture, Sources, Synchronisation and Load &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

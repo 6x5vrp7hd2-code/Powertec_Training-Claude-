@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answers &mdash; Section 11 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-11-ups-architecture.html">The UPS — Architecture, Sources, Synchronisation and Load</a> &rsaquo; <a href="assessment-11-ups-architecture.html">Assessment</a> &rsaquo; Answers</div>
+    <div class="eyebrow">Answers &middot; Section 11</div>
+    <h1>The UPS — Architecture, Sources, Synchronisation and Load</h1>
+    <p>Model answers and multiple-choice key.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice &mdash; Answer Key</h2>
+        <div style="margin-bottom:14px;"><p><strong>1. What does “VFI” mean in the IEC 62040-3 UPS classification?</strong><br>
+        Correct answer: <span class="status-pill done">A</span> &mdash; Voltage and Frequency Independent — the double-conversion topology fully decoupled from the utility</p></div><div style="margin-bottom:14px;"><p><strong>2. Why can the static bypass switch (SSW) transfer load in only a few milliseconds?</strong><br>
+        Correct answer: <span class="status-pill done">A</span> &mdash; It uses thyristors — solid-state devices with no moving parts that can be commanded to conduct almost instantaneously</p></div><div style="margin-bottom:14px;"><p><strong>3. What must be true of the inverter and the bypass source before a “without-break” static transfer can occur?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; They must be synchronised: same voltage, same frequency, same phase angle</p></div><div style="margin-bottom:14px;"><p><strong>4. In a parallel UPS system, what happens to the total load when one module is isolated or fails?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; The total load does not change; it is redistributed across the remaining modules, increasing the load percentage on each</p></div><div style="margin-bottom:14px;"><p><strong>5. Why is the MBB (maintenance bypass breaker) described as “a continuity device, not a separation device”?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; Because closing it feeds the load directly from raw utility with no protection against outages, and does not itself isolate the UPS — it keeps the load supplied while other devices are opened around it</p></div>
+        <h2 style="margin-top:20px;">Long Answer &mdash; Model Points</h2>
+        <div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">1. Explain the three IEC 62040-3 UPS classes (VFD, VI, VFI) and why VFI (double conversion) is specified almost universally for critical data centre loads.</p><p>VFD (Voltage and Frequency Dependent) is the simplest topology: the load runs directly off mains most of the time, switching to battery/inverter only on a disturbance — cheap but offers minimal continuous protection. VI (Voltage Independent) regulates voltage (e.g., via a tap-changing transformer or similar) but still passes mains frequency variations through to the load. VFI (Voltage and Frequency Independent, double conversion) continuously manufactures the entire output waveform via its inverter, fully decoupling the load from any upstream voltage or frequency disturbance. Since data centre IT equipment is highly sensitive to both voltage and frequency anomalies, and since even brief disturbances can cause server faults or reboots, VFI is specified almost universally for genuinely critical loads despite its higher cost and lower efficiency compared to VFD/VI topologies.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">2. Describe why inverter-to-bypass synchronisation is described as “a capital point,” and explain what happens physically if a transfer is forced while the HMI shows “not synchronised.”</p><p>Synchronisation matters because, for the few milliseconds of a static transfer, the inverter and bypass sources are briefly in parallel; if their voltages are identical at every instant (synchronised), no current flows between them and the load sees no disturbance. If forced out of synchronisation, the voltage difference (ΔU) drives a large circulating current limited only by the inverter’s impedance, which typically triggers an inverter overcurrent shutdown and — critically — a break-before-make transfer occurs instead of a seamless one, delivering a disruption of tens of milliseconds to the load, which is often enough to crash sensitive IT equipment.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">3. Explain how load sharing works in a parallel UPS system, and describe the specific risk illustrated by the guide’s example of four modules at 52% becoming three modules at 69%, then potentially becoming an overloaded two modules at 103%.</p><p>In a parallel system, all inverters are made to behave as one via a parallel logic bus, sharing the total load equally: each module supplies total load ÷ number of active modules. If a module is isolated, the total load (unchanged) redistributes across the remaining modules, raising each one’s individual loading percentage. The guide’s example shows how this compounds dangerously: with all four modules healthy, isolating one takes the site from 52% to 69% per module (safe); but if one module is already faulted (three effectively healthy) and a second is then isolated, only two modules remain to carry the full load, pushing each to 103% — a certain overload, illustrating why the residual load calculation (section 12) must always account for any already-faulted equipment, not just the equipment being newly isolated.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">4. Describe the three (plus one) sources the guide says a UPS has, and explain why “opening both AC inputs” does not make the UPS electrically dead.</p><p>The UPS has three active sources — rectifier (mains) input, bypass input, and the battery — plus internal capacitors that store energy passively. Opening both AC inputs (rectifier and bypass) removes only the alternating-current sources; it does nothing to the battery, which is a chemical source producing DC voltage regardless of any AC connection, nor to the capacitors, which remain charged for several minutes after de- energisation. This is why the guide calls the “both AC inputs open = UPS is dead” belief the “classic UPS mistake” — full isolation additionally requires opening and locking the battery breaker (QF-BAT) and waiting out (then verifying) the capacitor discharge time.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">5. Explain the difference in role between the static bypass switch (SSW) and the maintenance bypass breaker (MBB), including which one is used for automatic disturbance-driven transfers versus planned maintenance.</p><p>The SSW (static bypass switch) is a fast, thyristor-based, automatic transfer path used to instantly move the load to the bypass source if the inverter fails, saturates, or is overloaded — it operates in milliseconds without any planned human intervention and provides no protection against outages once engaged. The MBB (maintenance bypass breaker) is a slower, mechanical device used deliberately by an operator to bypass the entire UPS (rectifier, inverter, and static bypass together) so that the whole unit can be isolated and worked on safely — it is a planned-maintenance tool, not an automatic- disturbance-response device, and it too provides no protection against outages while closed.</p></div>
+      </div>
+      <div class="pager">
+        <a href="assessment-11-ups-architecture.html">&larr; Back to Assessment</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-12-residual-load.html">Calculating the Residual Load — Method and Worked Examples &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

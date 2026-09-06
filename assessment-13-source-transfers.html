@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assessment &mdash; Section 13 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-13-source-transfers.html">Source Transfers and Couplings</a> &rsaquo; Assessment</div>
+    <div class="eyebrow">Assessment &middot; Section 13</div>
+    <h1>Source Transfers and Couplings</h1>
+    <p>Work through the multiple-choice and long-answer questions, then check your answers.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice</h2>
+        <div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">1. What is the approximate formula for the current that flows when paralleling two out-of- synchronisation sources?</p><div class="check-row"><input type="radio" name="q0" style="accent-color:#F58220;width:16px;height:16px;"><label>A) I = U × R</label></div><div class="check-row"><input type="radio" name="q0" style="accent-color:#F58220;width:16px;height:16px;"><label>B) I = ΔU ÷ X (voltage difference divided by link impedance)</label></div><div class="check-row"><input type="radio" name="q0" style="accent-color:#F58220;width:16px;height:16px;"><label>C) I = P ÷ V</label></div><div class="check-row"><input type="radio" name="q0" style="accent-color:#F58220;width:16px;height:16px;"><label>D) I = C × dV/dt</label></div></div><div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">2. Why is paralleling two feeders from the SAME busbar generally safe without a synchro- check relay?</p><div class="check-row"><input type="radio" name="q1" style="accent-color:#F58220;width:16px;height:16px;"><label>A) Because busbars automatically synchronise any connected feeder</label></div><div class="check-row"><input type="radio" name="q1" style="accent-color:#F58220;width:16px;height:16px;"><label>B) They carry, at every instant, essentially the same voltage (ΔU ≈ 0), since they share a common origin</label></div><div class="check-row"><input type="radio" name="q1" style="accent-color:#F58220;width:16px;height:16px;"><label>C) Because they are always at different voltages, cancelling out</label></div><div class="check-row"><input type="radio" name="q1" style="accent-color:#F58220;width:16px;height:16px;"><label>D) Because same-busbar feeders never carry any current</label></div></div><div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">3. What does the synchro-check relay (ANSI 25) verify before permitting a breaker to close and parallel two sources?</p><div class="check-row"><input type="radio" name="q2" style="accent-color:#F58220;width:16px;height:16px;"><label>A) Only the ambient temperature of the switchgear</label></div><div class="check-row"><input type="radio" name="q2" style="accent-color:#F58220;width:16px;height:16px;"><label>B) Only that both sources are switched on</label></div><div class="check-row"><input type="radio" name="q2" style="accent-color:#F58220;width:16px;height:16px;"><label>C) Matching voltage, frequency, and phase angle (and confirmed phase sequence) within a defined window</label></div><div class="check-row"><input type="radio" name="q2" style="accent-color:#F58220;width:16px;height:16px;"><label>D) Only that the correct operator is logged in</label></div></div><div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">4. What is “reverse power” protection (ANSI 32) designed to detect?</p><div class="check-row"><input type="radio" name="q3" style="accent-color:#F58220;width:16px;height:16px;"><label>A) A transformer with reversed primary and secondary windings</label></div><div class="check-row"><input type="radio" name="q3" style="accent-color:#F58220;width:16px;height:16px;"><label>B) A cable installed with reversed phase colours</label></div><div class="check-row"><input type="radio" name="q3" style="accent-color:#F58220;width:16px;height:16px;"><label>C) A generator’s prime mover losing power while still electrically connected, causing the generator to be driven as a motor by the other source</label></div><div class="check-row"><input type="radio" name="q3" style="accent-color:#F58220;width:16px;height:16px;"><label>D) A UPS discharging its battery in the wrong direction</label></div></div><div style="margin-bottom:22px;"><p style="font-weight:600;margin-bottom:8px;">5. What is the fundamental danger of paralleling two non-synchronised sources?</p><div class="check-row"><input type="radio" name="q4" style="accent-color:#F58220;width:16px;height:16px;"><label>A) It is equivalent to creating a short-circuit between the two sources, with destructive currents proportional to their voltage difference</label></div><div class="check-row"><input type="radio" name="q4" style="accent-color:#F58220;width:16px;height:16px;"><label>B) It is only a risk above 100 kV</label></div><div class="check-row"><input type="radio" name="q4" style="accent-color:#F58220;width:16px;height:16px;"><label>C) It only affects the neutral conductor, not the phases</label></div><div class="check-row"><input type="radio" name="q4" style="accent-color:#F58220;width:16px;height:16px;"><label>D) It causes a gradual, harmless voltage drift over several minutes</label></div></div>
+        <h2 style="margin-top:10px;">Long Answer</h2>
+        <div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">1. Explain, using the ΔU ÷ X relationship, why a 180° phase difference between two sources being paralleled is equivalent to a short-circuit at twice the network voltage.</p><textarea rows="4" data-track-field="guide-13-longq-0" placeholder="Write your answer..."></textarea></div><div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">2. Describe the four synchronisation conditions the guide lists, and explain which one is structural (cannot be corrected in the field) versus which are dynamically monitored during the paralleling operation.</p><textarea rows="4" data-track-field="guide-13-longq-1" placeholder="Write your answer..."></textarea></div><div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">3. Explain the difference between closed transition (make-before-break) and open transition (break-before-make) transfers, and describe the specific additional risk that closed transition introduces which open transition avoids.</p><textarea rows="4" data-track-field="guide-13-longq-2" placeholder="Write your answer..."></textarea></div><div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">4. Why does a “studied prolonged parallel” with the public utility grid require a grid operator agreement, reverse power protection, and validated combined short-circuit current, according to the guide?</p><textarea rows="4" data-track-field="guide-13-longq-3" placeholder="Write your answer..."></textarea></div><div style="margin-bottom:20px;"><p style="font-weight:600;margin-bottom:6px;">5. Using the real case of an STS closed-transition bypass, explain why the MOP must always have the operator verify synchronisation before authorising the manoeuvre, even though interlocks and a synchro-check relay are already in place.</p><textarea rows="4" data-track-field="guide-13-longq-4" placeholder="Write your answer..."></textarea></div>
+      </div>
+      <div class="card" style="margin-top:20px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Finished? Check your answers.</p>
+        <a href="answers-13-source-transfers.html" class="btn-cta">View Answers &rarr;</a>
+      </div>
+      <div class="pager">
+        <a href="guide-13-source-transfers.html">&larr; Back to Section 13</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <span></span>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

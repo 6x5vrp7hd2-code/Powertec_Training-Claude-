@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answers &mdash; Section 15 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-15-regulatory-framework.html">The Regulatory Framework and Electrical Qualifications</a> &rsaquo; <a href="assessment-15-regulatory-framework.html">Assessment</a> &rsaquo; Answers</div>
+    <div class="eyebrow">Answers &middot; Section 15</div>
+    <h1>The Regulatory Framework and Electrical Qualifications</h1>
+    <p>Model answers and multiple-choice key.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice &mdash; Answer Key</h2>
+        <div style="margin-bottom:14px;"><p><strong>1. What is the fundamental principle common to every regulatory framework the guide describes (French, UK, North American, and others)?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; Nobody works on or near an electrical installation without a formal recognition of competence and a site authorisation</p></div><div style="margin-bottom:14px;"><p><strong>2. In the French NF C 18-510 system, what does the letter “C” (as in BC or HC) specifically designate?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; The isolation officer role (“chargé de consignation”)</p></div><div style="margin-bottom:14px;"><p><strong>3. What did the NFPA 70E 2024 edition specifically clarify regarding closed panel doors?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; A closed door is generally NOT sufficient on its own to eliminate the need for arc flash PPE during switching or abnormal operating conditions</p></div><div style="margin-bottom:14px;"><p><strong>4. Under NFPA 70E, can the Incident Energy Analysis method and the Table (Category) method be mixed for the same piece of equipment?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; No — one method must be chosen and consistently applied per piece of equipment, with the process documented</p></div><div style="margin-bottom:14px;"><p><strong>5. What is a “titre d’habilitation” under the French NF C 18-510 system?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; A named qualification issued by the employer after training, assessment and medical fitness, attesting competence — but not itself granting the right to work on any specific site</p></div>
+        <h2 style="margin-top:20px;">Long Answer &mdash; Model Points</h2>
+        <div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">1. Explain why the guide states that “the texts never replace site rules,” and describe what additional layer of authorisation is always required beyond a national/regional qualification.</p><p>National/regional regulatory texts establish the general legal and technical framework (competence categories, safety principles, minimum standards), but they cannot account for a specific site’s actual equipment, layout, interlocks, and operational history. Every operator therefore layers its own site electrical safety rules, permit-to-work procedure, and MOP/SOP/EOP framework on top of the regulatory baseline — meeting the national qualification is necessary but not sufficient; the site itself must also specifically authorise a person for its own installation.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">2. Using the French symbol system, explain the difference between a BR (LV general intervention officer) and a BC/HC (isolation officer), including what each is and is not authorised to do.</p><p>A BR (LV general intervention officer) may work alone in LV systems up to 400 V/63 A three-phase, performing troubleshooting, replacement, connection, and measurements, and may isolate equipment for their own interventions only. A BC/HC (isolation officer) has a distinct, specific role: performing isolations and de-isolations for OTHERS — separating, locking, identifying, testing for dead, earthing, and issuing the isolation certificate that hands a safely isolated installation over to a work leader. A BR cannot direct or isolate on behalf of a broader work team the way a BC/HC does; their authority is scoped to their own individual intervention.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">3. Describe the 2024 updates to NFPA 70E and the related OSHA rule, and explain their practical significance for a data centre operations team.</p><p>The 2024 editions strengthened documentation requirements for arc-flash risk assessments and PPE-selection rationale for any task above 50 V, clarified that closed panel doors do not automatically remove the need for PPE during switching or abnormal conditions, and added a hearing-protection requirement for anyone within the arc flash boundary regardless of active involvement in the task. Practically, this means data centre operations teams must have current, documented risk assessments (not “one- time and forgotten” studies), cannot assume a closed switchboard door makes racking or switching operations PPE-exempt, and must extend PPE discipline to bystanders, not just the person actively performing the work.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">4. Explain why a “higher qualification includes the lower levels of the same domain” (e.g., a B2 can do what a B1 does) but “a B never includes an H.” What is the reasoning behind this rule?</p><p>Because domains (LV vs MV/HV) involve fundamentally different hazard classes, training content, and equipment familiarity — competence in low voltage work does not automatically confer competence in high voltage work, so the two are kept structurally separate no matter how senior the LV qualification. Within a single domain, however, a higher-level role (work leader, B2/H2) is trained to perform everything a lower-level role (electrician operative, B1/H1) does, plus additional responsibilities (directing work, receiving isolation certificates), so the higher qualification logically subsumes the lower one.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">5. Why does the guide emphasise a “country overview for a global role,” and what practical risk does it protect against for someone working across multiple countries’ data centres?</p><p>Different countries use entirely different vocabularies, legal mechanisms, and named roles for what is functionally the same underlying safety function (e.g., an isolation officer in France vs. an Authorised Person in the UK vs. a “Qualified Person” under NFPA 70E in North America). Someone working across multiple countries’ data centres who assumes their home-country qualification or terminology automatically applies elsewhere risks either being legally unauthorised to perform a role they believe they’re qualified for, or misunderstanding who on a foreign site actually holds the equivalent authority they need to coordinate with — the country overview exists specifically to let a global specialist “translate” roles correctly before working internationally.</p></div>
+      </div>
+      <div class="pager">
+        <a href="assessment-15-regulatory-framework.html">&larr; Back to Assessment</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-16-ppe-instruments.html">Personal Protective Equipment and Instruments &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

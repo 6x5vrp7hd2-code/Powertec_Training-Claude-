@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answers &mdash; Section 02 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-02-conductors.html">Conductors — Phase, Neutral, PE and Exposed Conductive Parts</a> &rsaquo; <a href="assessment-02-conductors.html">Assessment</a> &rsaquo; Answers</div>
+    <div class="eyebrow">Answers &middot; Section 02</div>
+    <h1>Conductors — Phase, Neutral, PE and Exposed Conductive Parts</h1>
+    <p>Model answers and multiple-choice key.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice &mdash; Answer Key</h2>
+        <div style="margin-bottom:14px;"><p><strong>1. What is the standard IEC colour for the protective earth (PE) conductor?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; Green- yellow</p></div><div style="margin-bottom:14px;"><p><strong>2. Why is the neutral conductor considered a live, dangerous conductor even though it is a “return” path?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; It carries current — including phase imbalance and harmonic currents — and can be energised</p></div><div style="margin-bottom:14px;"><p><strong>3. What does a PEN conductor combine?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; The neutral and protective earth functions in a single conductor</p></div><div style="margin-bottom:14px;"><p><strong>4. In normal operation (no fault present), how much current should flow in the PE conductor?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; Zero</p></div><div style="margin-bottom:14px;"><p><strong>5. What is an “exposed conductive part” (masse)?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; A metal part of equipment that can be touched and is not supposed to be live in normal operation</p></div>
+        <h2 style="margin-top:20px;">Long Answer &mdash; Model Points</h2>
+        <div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">1. Explain the two distinct reasons for connecting parts of an electrical installation to earth, and why they must not be confused with each other.</p><p>Earthing the transformer neutral fixes the voltage reference of the whole installation (without it, phase-to-ground voltages could float to dangerous, unpredictable levels). Bonding exposed conductive parts to earth via PE protects people, by giving any fault current a low-impedance return path that a protective device can detect and clear. Confusing the two can lead to believing that “the system is earthed” automatically means “people are protected,” when in fact both connections must be correctly made for protection to actually function.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">2. Describe what happens, step by step, if a phase conductor touches an exposed conductive part that IS properly bonded to the PE, versus one that is NOT bonded.</p><p>Bonded case: the fault current has a low-impedance path back to source through the PE, so it is large enough for an ordinary protective device to detect and trip within milliseconds — the frame is only briefly live. Not bonded: the frame becomes permanently live at full phase voltage with no path to trip a protection; the first person touching it becomes the return path to earth, receiving the full fault current through their body.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">3. Explain why a PEN conductor is acceptable upstream of a data centre’s transformer but forbidden downstream of the UPS.</p><p>Upstream, on large-cross-section conductors feeding the transformer, a PEN carries manageable, well-controlled current and saves copper. Downstream of a UPS — where normal neutral current includes triplen harmonics from IT loads — permanently bonding neutral and PE together (as PEN does) would let that neutral current flow through every bonded frame, cable tray, and rack chassis in parallel with the PEN conductor, creating noise, heating, and a severe safety risk if the PEN ever breaks (all downstream frames would then rise to the neutral’s full unbalanced voltage with nothing to trip).</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">4. Using the touch-voltage figures given (human body resistance ~1,000–2,000 Ω, 230 V supply), explain how the 30 mA and 10 mA thresholds relate to real physiological danger.</p><p>At 230 V through a body resistance of ~1,000 Ω, Ohm’s Law gives roughly 230 mA — far above both danger thresholds. 30 mA is the recognised threshold for ventricular fibrillation risk, and 10 mA is the “let-go” threshold below which muscles can still release grip voluntarily; above it, sustained muscular contraction can trap someone in contact with the live part. These figures are why touch-voltage limits (50 V AC, 120 V DC) and fast disconnection times (0.2–0.4 s) are mandated by IEC 60364 and NF C 15-100.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">5. Why does the guide say the neutral “can carry more current than the phases” is possible, and under what circumstance does this happen (cross-reference with the concept developed further in section 14)?</p><p>This happens due to triplen harmonics (3rd, 9th, 15th…) drawn by non-linear IT loads (UPS rectifiers, switch-mode power supplies). Unlike balanced fundamental current, which cancels in the neutral across three phases 120° apart, triplen harmonics are in phase across all three phases and add arithmetically in the neutral rather than cancelling — this is why IT distribution neutrals are often oversized (factor ~1.7) relative to the phase conductors.</p></div>
+      </div>
+      <div class="pager">
+        <a href="assessment-02-conductors.html">&larr; Back to Assessment</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-03-faults.html">Faults — Overload, Short-Circuit, Earth Fault &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

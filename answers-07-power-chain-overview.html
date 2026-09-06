@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answers &mdash; Section 07 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-07-power-chain-overview.html">The Data Centre Power Chain — Overview</a> &rsaquo; <a href="assessment-07-power-chain-overview.html">Assessment</a> &rsaquo; Answers</div>
+    <div class="eyebrow">Answers &middot; Section 07</div>
+    <h1>The Data Centre Power Chain — Overview</h1>
+    <p>Model answers and multiple-choice key.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice &mdash; Answer Key</h2>
+        <div style="margin-bottom:14px;"><p><strong>1. What does “concurrent maintainability” mean in data centre design?</strong><br>
+        Correct answer: <span class="status-pill done">A</span> &mdash; Every piece of equipment needed to support the IT load can be shut down and maintained without impacting operations</p></div><div style="margin-bottom:14px;"><p><strong>2. In an N+1 redundancy topology, what happens when one module is deliberately isolated for maintenance and no other module is already faulty?</strong><br>
+        Correct answer: <span class="status-pill done">A</span> &mdash; The remaining modules absorb the total load, with margin, and the site is not left “at N” as a result</p></div><div style="margin-bottom:14px;"><p><strong>3. According to the Uptime Institute Tier classification system, what distinguishes Tier III from Tier II?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; Tier III adds multiple independent distribution paths on top of Tier II’s redundant components, enabling concurrent maintainability</p></div><div style="margin-bottom:14px;"><p><strong>4. What must a specialist calculate before isolating any piece of equipment in a redundant data centre?</strong><br>
+        Correct answer: <span class="status-pill done">A</span> &mdash; The residual load on the surviving equipment, to confirm it stays within the site policy threshold</p></div><div style="margin-bottom:14px;"><p><strong>5. Why is an “N+1 site with one module already faulty” effectively operating at “N”?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; Because the redundant module is already consumed by the existing fault, so no further isolation can occur without exceeding capacity</p></div>
+        <h2 style="margin-top:20px;">Long Answer &mdash; Model Points</h2>
+        <div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">1. Explain the difference between N, N+1, 2N, and distributed redundant (3N/2) topologies, including the operational consequence of isolating one unit of capacity in each.</p><p>N: bare capacity with no spare — any maintenance directly risks or causes an outage. N+1: one extra module beyond what’s needed, so a single module can be isolated and the remaining modules absorb the load with margin — but if another module is already unavailable, the site has no further spare capacity. 2N: two complete, independent chains, so an entire path can be isolated while the other carries 100% of the load — provided that path genuinely has the capacity and the load is truly dual-corded across both paths. Distributed redundant (3N/2): capacity is shared across several blocks sized to absorb a block’s loss collectively, offering resilience similar to 2N at lower cost, but load redistribution on an isolation is not necessarily uniform across the survivors and must be checked against the actual cross-transfer scheme.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">2. Why does the guide describe residual load calculation as “reflex no. 1 of the specialist”? Explain what could go wrong if this step were skipped.</p><p>Skipping the residual load calculation risks isolating equipment while the surviving units are already near or above their safe operating capacity, potentially causing an overload event and a genuine outage — precisely the opposite of what redundancy was designed to prevent. This is why the guide treats it as the very first thing a specialist must do before any hand-over, not an optional check.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">3. Compare the Uptime Institute’s Tier III and Tier IV classifications in terms of what each guarantees and the practical cost/complexity trade-off between them.</p><p>Tier III guarantees concurrent maintainability: every component in the distribution paths can be taken offline for planned maintenance without impacting the IT load, but a genuine unplanned single-component failure may still require a manual switchover with brief downtime. Tier IV additionally guarantees fault tolerance: an unplanned failure of any single system is absorbed automatically without impact. The jump from Tier III (~99.982% availability) to Tier IV (~99.995%) represents a proportionally smaller uptime gain relative to the substantial extra capital cost of duplicating the entire power and cooling chain.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">4. Explain why an N+1 site with one module already in a faulted state effectively becomes an N site, and why this matters before authorising any new isolation.</p><p>In an N+1 site, the “+1” module is the only spare capacity above what’s strictly needed. If that spare module is already faulted (e.g., on static bypass due to a rectifier fault), the site now has exactly enough capacity for the load with zero margin — functionally identical to an N topology, even though it is nominally labelled N+1. Any new isolation at this point would remove genuine, needed capacity, risking an overload on the remaining modules, which is why the guide’s red list (section 21) explicitly forbids launching an operation while redundancy is already consumed, without a formal waiver.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">5. Using the guide’s redundancy topology table, explain what “load transfers are cross- linked” means for distributed redundant topologies, and why the up-to-date load transfer scheme is essential before any operation.</p><p>In a distributed redundant scheme, isolating one block does not necessarily spread its load evenly across all remaining blocks — the actual redistribution follows whatever cross-transfer wiring and control logic the system was designed with, which can send disproportionate shares of the isolated block’s load to specific surviving blocks. Without consulting the current, accurate load transfer scheme, a specialist could mistakenly assume even sharing and authorise an operation that in reality pushes one surviving block well past its safe threshold.</p></div>
+      </div>
+      <div class="pager">
+        <a href="assessment-07-power-chain-overview.html">&larr; Back to Assessment</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-08-reading-sld.html">Reading a Single Line Diagram &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

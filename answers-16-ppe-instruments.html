@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answers &mdash; Section 16 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-16-ppe-instruments.html">Personal Protective Equipment and Instruments</a> &rsaquo; <a href="assessment-16-ppe-instruments.html">Assessment</a> &rsaquo; Answers</div>
+    <div class="eyebrow">Answers &middot; Section 16</div>
+    <h1>Personal Protective Equipment and Instruments</h1>
+    <p>Model answers and multiple-choice key.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice &mdash; Answer Key</h2>
+        <div style="margin-bottom:14px;"><p><strong>1. What is the “arc flash boundary”?</strong><br>
+        Correct answer: <span class="status-pill done">A</span> &mdash; The calculated approach distance at which incident energy reaches approximately 1.2 cal/cm², the threshold associated with onset of a second-degree burn</p></div><div style="margin-bottom:14px;"><p><strong>2. Under NFPA 70E, what must always be true of the arc-rated PPE selected for a task?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; Its arc rating (cal/cm²) must be equal to or greater than the calculated or table-derived incident energy for that specific task</p></div><div style="margin-bottom:14px;"><p><strong>3. What does a CAT III rating on a multimeter indicate it is designed to withstand?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; The transient overvoltage levels found at fixed distribution equipment such as panels and MSBs</p></div><div style="margin-bottom:14px;"><p><strong>4. Why must a two-pole voltage detector (VAT), rather than a multimeter, be used for a voltage absence test?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; A multimeter set to the wrong range or with a weak battery could incorrectly show 0 V on a live circuit, while a VAT is specifically designed to give a reliable binary answer</p></div><div style="margin-bottom:14px;"><p><strong>5. What is the correct procedure (“live-dead-live”) for a voltage absence test?</strong><br>
+        Correct answer: <span class="status-pill done">A</span> &mdash; Test the detector on a known live source, measure on the equipment expecting absence, then re- test the detector on the known live source again</p></div>
+        <h2 style="margin-top:20px;">Long Answer &mdash; Model Points</h2>
+        <div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">1. Explain why the arc flash boundary is described as “not a safe line in the way a shock approach boundary implies safety,” and describe what actually happens to incident energy as distance from the source increases.</p><p>A shock approach boundary is designed around the idea that staying outside it prevents contact-based electric shock entirely. The arc flash boundary, by contrast, is a calculated thermal-injury threshold (1.2 cal/cm², onset of second-degree burn) — crossing it while equipment is energised and being worked on requires PPE, but it is not a guarantee of complete safety even just inside it, since incident energy continues to exist (just below the second-degree-burn threshold) and other hazards (shock, projectiles) are unrelated to this specific boundary. Incident energy falls off sharply as distance from the arc source increases, which is why simply standing farther back during a switching operation is a genuine, measurable risk reduction — not merely a symbolic gesture.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">2. Describe the difference between NFPA 70E’s Incident Energy Analysis method and its Table (Category) method for selecting PPE, including a limitation of the Table method.</p><p>The Incident Energy Analysis method calculates the specific thermal energy (cal/cm²) a worker could be exposed to at a defined working distance for a specific piece of equipment, then requires PPE with an arc rating at least equal to that calculated value — this is precise but requires an engineering study. The Table (Category) method instead uses pre-defined equipment/task/voltage combinations to look up a PPE category directly without a calculation — but it is only valid when the equipment’s actual voltage, available fault current, and protective device clearing time all fall within the specific ranges the table was built around; if any parameter falls outside those ranges, or the equipment type isn’t listed, the table method cannot be used and incident energy analysis becomes mandatory instead.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">3. Explain the measurement category (CAT) system (CAT II, III, IV) and why using an under- rated instrument at a given point in an installation is dangerous.</p><p>CAT II covers plug-connected/receptacle-level equipment; CAT III covers fixed distribution equipment such as panels and main switchboards; CAT IV covers the origin of the installation, such as the utility service entrance or metering point, where the highest-energy transients from the wider grid can appear. Using an under-rated instrument (e.g., a CAT II-rated multimeter) at a higher-CAT location (inside an MSB) means the instrument was never designed to survive the transient overvoltage energy that can genuinely occur there — a surge during the measurement could cause the instrument to fail violently, injuring the person holding it.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">4. Describe the full three-step “live-dead-live” voltage absence test protocol, and explain why skipping the final re-test on a known live source would be a serious safety gap.</p><p>Step one confirms the detector itself is working correctly by testing it on a source known to be live — if it doesn’t indicate “live” here, the detector is faulty and must not be trusted. Step two performs the actual measurement on the target equipment, expecting an indication of absence. Step three re-tests the detector on the known live source again, confirming it hasn’t failed silently between steps one and two. Skipping step three would mean a reading of “absence” in step two could actually be a false zero from a detector that failed partway through — exactly the scenario that would lead someone to believe a live circuit is dead.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">5. Compare at least three PPE items from the guide’s table (e.g., insulating gloves, arc- rated clothing, insulating mat), including the standard governing each and the specific hazard each protects against.</p><p>Insulating gloves (IEC 60903/ASTM D120): protect against direct electric shock during switching or testing near bare live parts, with voltage classes rated from 500 V up to 36 kV — checked for air-leak integrity (inflation test) before each use and a periodic laboratory retest. Arc-rated clothing (IEC 61482-2/NFPA 70E cal/cm² rating): protects the wearer’s skin from thermal burns in an arc flash event, matched to the calculated or table-derived incident energy for the specific task — checked for a complete, closed outfit with no non-arc-rated synthetic fabric underneath (which can melt into the skin). Insulating mat (IEC 61111/ASTM D178): provides a floor-level insulating barrier reducing shock risk from step/touch voltage while standing in front of live MV or MSB equipment during switching — checked for the appropriate voltage class and general cleanliness/condition.</p></div>
+      </div>
+      <div class="pager">
+        <a href="assessment-16-ppe-instruments.html">&larr; Back to Assessment</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-17-interlocks.html">Interlocks — Read a Diagram and Never Be Caught Out by Them &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

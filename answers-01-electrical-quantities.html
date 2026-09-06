@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answers &mdash; Section 01 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-01-electrical-quantities.html">Electrical Quantities — What to Understand Before Anything Else</a> &rsaquo; <a href="assessment-01-electrical-quantities.html">Assessment</a> &rsaquo; Answers</div>
+    <div class="eyebrow">Answers &middot; Section 01</div>
+    <h1>Electrical Quantities — What to Understand Before Anything Else</h1>
+    <p>Model answers and multiple-choice key.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice &mdash; Answer Key</h2>
+        <div style="margin-bottom:14px;"><p><strong>1. What does Ohm’s Law state?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; U = R × I</p></div><div style="margin-bottom:14px;"><p><strong>2. Why is apparent power (kVA), not active power (kW), used to size cables, transformers and UPS?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; Because it is the amperes — not the watts — that heat and stress the equipment</p></div><div style="margin-bottom:14px;"><p><strong>3. Why does an alternating current arc extinguish more easily than a direct current arc?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; AC crosses zero volts/current 100 times a second (in a 50 Hz system), giving the arc a natural chance to go out</p></div><div style="margin-bottom:14px;"><p><strong>4. A 500 kVA UPS operating at 0.9 power factor delivers how much real (active) power?</strong><br>
+        Correct answer: <span class="status-pill done">D</span> &mdash; 450 kW</p></div><div style="margin-bottom:14px;"><p><strong>5. What is the main practical advantage of three-phase power distribution over single- phase for large equipment?</strong><br>
+        Correct answer: <span class="status-pill done">A</span> &mdash; Constant instantaneous power delivery, thinner cables for the same power, and simpler motor design</p></div>
+        <h2 style="margin-top:20px;">Long Answer &mdash; Model Points</h2>
+        <div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">1. Explain, using Ohm’s Law, why a short-circuit produces a much larger fault current than an earth fault through soil, and why this difference requires two different families of protective device.</p><p>Short-circuit: near-zero impedance path directly between conductors → I = U ÷ R becomes very large (tens of thousands of amps) almost instantly, requiring fast, high- breaking-capacity devices (breakers, fuses). Earth fault through soil: impedance of the soil/earth-electrode path is high (10–100 Ω or more), so the resulting fault current is only a few amps — too small for an ordinary overcurrent breaker to see, but still dangerous to touch. This gap in current magnitude is exactly why the RCD (residual current device) was invented: rather than measuring an absolute current threshold, it compares outgoing vs. returning current and trips on any imbalance, regardless of how small the fault current is.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">2. Describe what active power factor correction (PFC) does inside a modern server power supply, and explain why its widespread adoption changed data centre load-sizing practices.</p><p>PFC circuitry inside a switch-mode power supply actively shapes the input current waveform to stay in phase with the voltage waveform, pushing the power factor from historically poor levels (0.6–0.7 in early switch-mode supplies) up to 0.9–0.99. This means IT load kVA is now much closer to kW, so UPS and cable capacity calculated on kVA more closely reflects real power demand — but oversizing habits from the “bad old days” of low power factor can lead to underused (and therefore inefficient) infrastructure if not corrected.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">3. Using the water analogy, explain the relationship between voltage, current and resistance/impedance in your own words, including why voltage can exist without any current flowing.</p><p>Voltage is analogous to water pressure: it exists in a pipe/wire even with the tap/switch closed. Current is like flow rate: it only occurs once a complete path is provided. Resistance/impedance is like the pipe’s narrowness or a valve restricting flow. A live socket outlet has voltage present permanently (pressure in the pipe) whether or not a device is plugged in (whether or not the tap is opened to create flow).</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">4. Explain why a DC arc (e.g. in a UPS battery string) is considered more dangerous to interrupt than an AC arc of the same voltage.</p><p>AC naturally crosses zero volts and zero current 100 times per second (50 Hz system), giving the arc a natural extinguishing opportunity at every zero-crossing. DC never crosses zero, so once an arc is struck in a DC circuit it can sustain itself indefinitely unless actively interrupted, requiring DC-rated switchgear with different arc-quenching mechanisms (e.g., longer contact gaps, arc chutes designed for DC).</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">5. A specialist measures 400 kW of active power and 500 kVA of apparent power at an MSB feeder. Calculate the power factor and explain what this value tells them about the load.</p><p>Power factor = P ÷ S = 400 ÷ 500 = 0.8. This tells the specialist the load’s real-power utilisation relative to its apparent power draw is lower than the 0.9–0.99 typical of modern IT loads, suggesting either older/uncorrected equipment, inductive loads (motors, older UPS designs), or a measurement/configuration issue worth investigating.</p></div>
+      </div>
+      <div class="pager">
+        <a href="assessment-01-electrical-quantities.html">&larr; Back to Assessment</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-02-conductors.html">Conductors — Phase, Neutral, PE and Exposed Conductive Parts &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

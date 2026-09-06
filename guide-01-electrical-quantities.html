@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 01 &mdash; Electrical Quantities — What to Understand Before Anything Else | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; Electrical Quantities — What to Understand Before Anything Else</div>
+    <div class="eyebrow">Section 01</div>
+    <h1>Electrical Quantities — What to Understand Before Anything Else</h1>
+    <p></p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose"><p>Voltage, current, and resistance form the foundation of every electrical concept in this guide, and the water analogy used in the original text is the standard teaching device used worldwide by electrical training bodies (NEC and IEC training programmes alike use “pressure/flow/restriction” analogies for the same reason: they map cleanly onto Ohm’s Law, V = IR).</p><p>A few additional points of context worth adding:</p><p>Ohm’s Law and fault behaviour. The relationship “low impedance = high fault current, high impedance = low fault current” is the single most important predictive tool an electrical specialist has. It explains why a bolted short-circuit produces currents in the tens of thousands of amps (near-zero impedance) while an earth fault through damp soil might only produce a few amps (impedance in the tens or hundreds of ohms) — which is precisely why a completely different category of protective device (the RCD) had to be invented to catch the second case.</p><p>Power factor in modern IT loads. The guide notes servers typically run at 0.9–0.99 power factor. It’s worth noting why: modern switch-mode power supplies with active Power Factor Correction (PFC) circuits are specifically designed to draw current in phase with voltage, correcting what used to be a much worse power factor (often 0.6– 0.7) in older, uncorrected rectifier-based supplies. This matters directly for UPS and generator sizing, since a poorly corrected load forces oversizing of upstream equipment for the same real (kW) demand.</p><p>Three-phase power and its “constant instantaneous power” property. The reason three-phase systems became the global standard for power distribution above a few kW is that the sum of three sinusoidal waveforms 120° apart is a constant, non-pulsating</p><p>value — unlike single-phase power, whose instantaneous power oscillates twice per cycle. This is why nearly all data centre UPS, PDUs, and switchgear above roughly 10 kVA are three-phase.</p><p>AC vs DC arc behaviour and battery risk. The point about AC current crossing zero 100 times a second (in a 50 Hz system) — aiding arc extinction — versus a DC arc that sustains itself, is the technical reason UL, IEC, and NFPA standards impose separate, generally more stringent, testing and interrupting requirements on DC-rated circuit breakers and switchgear compared to AC-rated equipment of the same voltage class. This becomes critical later in the guide’s UPS battery chapter (6.2), where DC arc risk on 400–800 V battery strings is treated as a distinct hazard category from AC arc flash.</p></div>
+      <div class="card" style="margin-top:30px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to test your understanding of Section 01?</p>
+        <a href="assessment-01-electrical-quantities.html" class="btn-cta">Take the Assessment &rarr;</a>
+      </div>
+      <div class="pager">
+        <a href="guide.html">&larr; All Sections</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-02-conductors.html">Conductors — Phase, Neutral, PE and Exposed Conductive Parts &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

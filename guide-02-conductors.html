@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 02 &mdash; Conductors — Phase, Neutral, PE and Exposed Conductive Parts | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; Conductors — Phase, Neutral, PE and Exposed Conductive Parts</div>
+    <div class="eyebrow">Section 02</div>
+    <h1>Conductors — Phase, Neutral, PE and Exposed Conductive Parts</h1>
+    <p></p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose"><p>The five-conductor model (L1, L2, L3, N, PE) is standardised internationally by IEC 60446/60445 (colour coding) and IEC 60364 (functional definitions), though colour conventions differ regionally — for example, the older UK/Irish colour code (red/yellow/blue phases, black neutral) was harmonised to the pan-European scheme (brown/black/grey phases, blue neutral, green-yellow PE) in 2004–2006, while North America uses its own distinct conventions (black/red/blue phases, white neutral, green or bare PE) under the NEC.</p><p>Additional context:</p><p>Why the neutral is “always considered dangerous.” Even in a perfectly designed system, the neutral conductor carries the vector sum of any phase imbalance plus all triplen harmonic currents (a topic developed fully in section 14). In a data centre specifically — where non-linear IT loads are the norm rather than the exception — the neutral routinely carries substantial current, which is precisely why NEC and IEC guidance both call for treating the neutral with the same respect as a live phase conductor during isolation work.</p><p>PEN conductors and international variation. The PEN conductor (combining neutral and earth) described as forbidden downstream of UPS is the basis of the TN-C-S system, known in the UK and Ireland as PME (Protective Multiple Earthing) — the dominant supply arrangement for UK public LV distribution. A PME supply combines the PEN conductor from the utility up to a “Multiple Earthed Neutral” (MEN) link at the customer’s service head, after which the installation runs separate N and PE conductors (i.e., becomes TN-C-S/TN-S internally) — mirroring exactly the “PEN upstream, forbidden downstream of critical equipment” rule the guide describes.</p><p>Exposed conductive parts and bonding. The concept of an “exposed conductive part” (masse) is functionally identical to what North American electricians call a “normally non-current-carrying metal part” under the NEC — the frame of an appliance, an enclosure, structural steel — anything metallic that could become accidentally live but isn’t meant to carry current in normal operation. Bonding all such parts together and to earth (equipotential bonding) is what prevents dangerous voltage differences from appearing between two pieces of metal someone might touch simultaneously.</p></div>
+      <div class="card" style="margin-top:30px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to test your understanding of Section 02?</p>
+        <a href="assessment-02-conductors.html" class="btn-cta">Take the Assessment &rarr;</a>
+      </div>
+      <div class="pager">
+        <a href="guide-01-electrical-quantities.html">&larr; Electrical Quantities — What to Understand Before Anything Else</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-03-faults.html">Faults — Overload, Short-Circuit, Earth Fault &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answers &mdash; Section 12 | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; <a href="guide-12-residual-load.html">Calculating the Residual Load — Method and Worked Examples</a> &rsaquo; <a href="assessment-12-residual-load.html">Assessment</a> &rsaquo; Answers</div>
+    <div class="eyebrow">Answers &middot; Section 12</div>
+    <h1>Calculating the Residual Load — Method and Worked Examples</h1>
+    <p>Model answers and multiple-choice key.</p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose">
+        <h2>Multiple Choice &mdash; Answer Key</h2>
+        <div style="margin-bottom:14px;"><p><strong>1. What is the four-step method for calculating residual load, in order?</strong><br>
+        Correct answer: <span class="status-pill done">A</span> &mdash; Measure the real load at the worst expected moment; count surviving equipment; project the redistributed load; compare against the site threshold</p></div><div style="margin-bottom:14px;"><p><strong>2. In Example B (N+1 already consumed), why is the operation forbidden?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; With UPS 4 already faulted, only two modules would survive isolating UPS 2, pushing each to 103% of rated capacity — a certain overload</p></div><div style="margin-bottom:14px;"><p><strong>3. Why does the guide specifically warn against calculating residual load using a “quiet Tuesday” or night-trough measurement?</strong><br>
+        Correct answer: <span class="status-pill done">C</span> &mdash; Because the real risk moment is the worst plausible combination of factors (peak IT load, battery recharge, cooling peak), not an average or low-demand period</p></div><div style="margin-bottom:14px;"><p><strong>4. In a 2N topology, what must be verified BEFORE isolating one complete path, in addition to the load percentage calculation?</strong><br>
+        Correct answer: <span class="status-pill done">B</span> &mdash; That the transfer actually works: STS in auto mode, servers genuinely dual-corded across both paths, no orphan single-corded load on the path being isolated</p></div><div style="margin-bottom:14px;"><p><strong>5. Why does kW vs kVA (power factor) matter as a “trap” in residual load calculations?</strong><br>
+        Correct answer: <span class="status-pill done">A</span> &mdash; UPS and cable ratings are fundamentally current/kVA-based, so working only in kW can understate the true thermal stress on surviving equipment</p></div>
+        <h2 style="margin-top:20px;">Long Answer &mdash; Model Points</h2>
+        <div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">1. Walk through Example A (N+1 nominal case) step by step, showing how the 69% figure is derived and why it is compared against an 85% threshold.</p><p>Total measured load is 620 kW across 4 UPS of 300 kW each (55% capacity nominally, or 155 kW/module = 52% before isolation). Isolating UPS 2 leaves 3 modules to carry the unchanged 620 kW total: 620 ÷ 3 ≈ 207 kW per module, which is 207 ÷ 300 = 69% of each surviving module’s rated capacity. Since 69% is below the site’s 85% policy threshold, the operation is authorised, with the calculated margin explicitly documented in the MOP as the justification.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">2. Explain why Example B (N+1 already consumed) is forbidden, and describe what would need to happen (repair or waiver) before the operation could proceed.</p><p>UPS 4 is already faulted (on static bypass) before the proposed isolation of UPS 2, meaning only 2 modules (UPS 1 and 3) would actually be left carrying load if UPS 2 were also isolated. Splitting the full 620 kW across just 2 modules of 300 kW each gives 310 kW per module — 103% of rated capacity, a certain overload. The operation must be forbidden until either UPS 4 is repaired (restoring three healthy survivors) or a formal waiver is obtained with an accompanying load reduction to bring the projection back under threshold.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">3. In Example C (2N), explain why simply calculating “80% ≤ 90% threshold, therefore authorised” is not sufficient on its own, and what additional verification is required.</p><p>The 80% figure only accounts for total power capacity; it says nothing about whether the load will actually and completely transfer to path B in practice. If the STS is not genuinely set to auto mode, if some servers are miswired as single-corded rather than dual-corded across both paths, or if an “orphan” single-corded load exists only on path A, isolating path A could leave real equipment without power even though the aggregate capacity math looks fine — hence the guide’s insistence on verifying the actual physical/logical transfer readiness, not just the percentage.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">4. Describe the specific risk illustrated in Example D (distributed redundancy) when the load transfer scheme is non-uniform (e.g., 60% of an isolated block’s load routes to one specific surviving block rather than splitting evenly).</p><p>If the cross-transfer scheme routes load unevenly (e.g., 60% of block C’s load specifically to block A rather than splitting evenly between A and B), a specialist who assumes uniform sharing could seriously underestimate the load landing on the specific block that receives the disproportionate share. In the guide’s example, this pushes block A to 85% — borderline against an assumed safe uniform-sharing calculation of only 80% — demonstrating why the current, accurate load transfer scheme (not an assumption of even splitting) must always be consulted for distributed redundant topologies.</p></div><div style="margin-bottom:18px;"><p style="font-weight:600;margin-bottom:6px;">5. List and explain at least four of the “traps of load calculation” the guide warns about, and explain why each could cause a specialist to underestimate real risk.</p><p>(a) kW vs kVA/power factor: working only in kW can understate true current-based stress, since cables/UPS are kVA/current-rated. (b) Load measured in the night trough while work occurs at peak: night-time measurements dramatically understate daytime peak demand, giving false confidence. (c) Battery recharge current after a generator test or outage: this adds substantial extra load for hours afterward, on top of the normal IT load, and is easy to overlook if only “IT load” is measured. (d) Planned customer deployment growth during the maintenance window: capacity that looks fine today may already be committed to new equipment going live during or shortly after the work, silently eroding the assumed margin.</p></div>
+      </div>
+      <div class="pager">
+        <a href="assessment-12-residual-load.html">&larr; Back to Assessment</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-13-source-transfers.html">Source Transfers and Couplings &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

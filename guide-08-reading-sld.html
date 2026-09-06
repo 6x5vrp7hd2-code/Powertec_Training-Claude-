@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 08 &mdash; Reading a Single Line Diagram | Powertec Training</title>
+<meta name="description" content="Powertec Training — Mission-Critical AP/SAP Development Programme.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="brand-lockup">
+      <a href="index.html" style="display:flex;align-items:baseline;gap:10px;text-decoration:none;">
+        <img src="logo-header.png" alt="Powertec">
+        <span class="division">training</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">MENU</button>
+    <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programme.html">PROGRAMME</a>
+        <a href="modules.html">MODULES</a>
+        <a href="guide.html" class="current">GUIDE</a>
+        <a href="gates.html">GATES</a>
+        <a href="tna.html">TNA</a>
+        <a href="evidence.html">EVIDENCE</a>
+        <a href="scenarios.html">SCENARIOS</a>
+        <a href="resources.html">RESOURCES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <a href="tna.html" class="btn-cta">Start TNA</a>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="guide.html">Guide</a> &rsaquo; Reading a Single Line Diagram</div>
+    <div class="eyebrow">Section 08</div>
+    <h1>Reading a Single Line Diagram</h1>
+    <p></p>
+  </div>
+</div>
+<section class="block"><div class="container">
+      <div class="prose"><p>Single-line diagram (SLD/one-line) symbology is governed internationally by IEC 60617 (Graphical symbols for diagrams), while device tagging follows IEC 81346 (industrial</p><p>systems designation), superseding the older IEC 60617-2 tagging convention the guide mentions.</p><p>Additional context:</p><p>Symbol logic as a safety-critical skill. The guide’s “reading key” — that symbols combine additively (a switch-disconnector has both the isolating bar AND the on-load circle; a draw-out breaker adds chevrons) — reflects a deliberate design philosophy in IEC 60617: each mark represents one specific capability (visible break, on-load switching, short-circuit breaking, withdrawability), so a device’s full symbol is a visual sum of exactly what it can do. This is precisely why confusing symbols (mistaking a switch-disconnector’s circle for a breaker’s cross) is identified elsewhere in the guide (section 9.1) as a historical cause of serious accidents — the symbol IS the safety information.</p><p>ANSI vs IEC diagram conventions. North American practice frequently uses ANSI/IEEE device function numbers (the same numbering referenced in section 10.3 — e.g., 50/51 for overcurrent, 87 for differential protection) combined with different graphical conventions (rectangles or half-circles for breakers, rather than the IEC cross), which is exactly the “in-house diagram” hazard the guide warns about: a site’s actual legend must always be confirmed before any manoeuvre, since two visually similar drawings from different design traditions can mean structurally different things.</p><p>IEC 81346 tagging. This standard (which superseded parts of IEC 60617-2 for reference designations) structures equipment tags hierarchically by function letter and location, which is the basis for tags like “QF2-RECT” the guide describes — Q for a switching device function, F for a protective function, “2” as an instance number, and “RECT” as a plain-language location/function suffix particular to the site’s own convention.</p></div>
+      <div class="card" style="margin-top:30px;text-align:center;background:#1E1E1E;border-color:#1E1E1E;">
+        <p style="color:#E6E6E6;margin-bottom:14px;">Ready to test your understanding of Section 08?</p>
+        <a href="assessment-08-reading-sld.html" class="btn-cta">Take the Assessment &rarr;</a>
+      </div>
+      <div class="pager">
+        <a href="guide-07-power-chain-overview.html">&larr; The Data Centre Power Chain — Overview</a>
+        <a href="guide.html" class="to-index">All Sections</a>
+        <a href="guide-09-switching-devices.html">Switching Devices and Their Performance &rarr;</a>
+      </div>
+    </div></section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Powertec Training</h4>
+        <ul>
+          <li>Mission-Critical AP/SAP<br>Development Programme</li>
+          <li>A division of Powertec</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <ul>
+          <li><a href="programme.html">Programme overview</a></li>
+          <li><a href="modules.html">Systems modules</a></li>
+          <li><a href="gates.html">Competency gates</a></li>
+          <li><a href="tna.html">Entry TNA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Evidence</h4>
+        <ul>
+          <li><a href="evidence.html">Evidence portfolio</a></li>
+          <li><a href="scenarios.html">Scenario library</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About the programme</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://powertecutilities.co.uk">Powertec Utilities</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      &copy; Powertec. Powertec Training is a division of Powertec Utilities Ltd, registered in England &amp; Wales, company no. 08117942.
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
